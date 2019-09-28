@@ -42,7 +42,7 @@ Options:
 	--output-directory=DIR
 		Output directory. One output file will be created for each region in `--bed` and
             the filenames will be generated from the basenames of the supplied BAM file(s) and the
-            name field (4th column) of the BED file. [default "/scicore/home/zavolan/kanitz/PROJECTS/yuluan/scriptsSoftware"]
+            name field (4th column) of the BED file. [default "."]
 
 	--maximum-region-width=INT
 		Maximum input region width. Use with care as wide regions will use excessive
