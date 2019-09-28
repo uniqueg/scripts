@@ -9,7 +9,7 @@ from Bio.Seq import Seq
 import cPickle as pickle
 
 ## Inputs
-dict_path = sys.argv[1] # e.g. /import/bc2/home/zavolan/GROUP/ISO_BENCH/resources/seq.qual.dictionary.hsa1.cPickle
+dict_path = sys.argv[1] # e.g. /path/to/seq.qual.dictionary.hsa1.cPickle
 
 ## Functions
 

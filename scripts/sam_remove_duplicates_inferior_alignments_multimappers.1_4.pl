@@ -1,5 +1,4 @@
 #!/usr/bin/env perl
-use lib "/scicore/home/zavolan/clipz/newClipz7/lib/perl";
 #==================#
 #   HEADER START   #
 #==================#

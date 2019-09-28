@@ -199,27 +199,6 @@ str <- opt[["strand"]]
 type <- opt[["overlap-type"]]
 verb <- opt[["verbose"]]
 
-########## DELETE ###############
-#chr.sizes.file <- NULL
-#bam.file <- "/scicore/home/zavolan/kanitz/scripts/TEST/test.bam"
-#bam.bg.file <- "/scicore/home/zavolan/kanitz/scripts/TEST/test.bam"
-#bai.file <- NULL
-#bai.bg.file <- NULL
-#ratios <- TRUE
-#out.prefix <- "/scicore/home/zavolan/kanitz/scripts/TEST/test.paired"
-#paired <- 2
-#is.paired <- TRUE
-#is.proper.pair <- TRUE
-#win.size <- 200000
-#step.size <- 100000
-#win.size.bg <- 400000
-#remove.incomplete <- TRUE
-#str <- "+/-"
-#type <- "5p"
-#verb <- TRUE
-##################################
-
-
 # Validate required arguments
 if ( is.null(bam.file) ) {
     print_help(opt_parser)

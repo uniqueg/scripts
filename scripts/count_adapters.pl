@@ -31,7 +31,7 @@ my $usage_info = &usage;
 #---> OPTIONS / ARGUMENTS <---#
 my $usage = '';
 my $quiet = '';
-my $adapters = '/scicore/home/zavolan/kanitz/resources/adapters/common_seq_adapters.grep';
+my $adapters = '';
 my $report = '';
 my $chunk = 100000;
 my $options_result = GetOptions (

@@ -1,12 +1,5 @@
 #!/usr/bin/env Rscript
 
-# Get from command-line in future
-gtf <- "/scicore/home/zavolan/kanitz/OTHER/IMIG/clips/Wago4/publicResources/Caenorhabditis_elegans.WBcel235.82.gtf.gz"
-csv <- "Wago4_DE/analyzedData/mRNA_site_extraction/sites.csv"
-regionPerNt <- "TEST_OUT/Caenorhabditis_elegans.WBcel235.82.regionByNucleotide.R"
-regionCounts <- "TEST_OUT/Caenorhabditis_elegans.WBcel235.82.regionCounts.R"
-outDir <- file.path(getwd(), "DE_OUT_TEST")
-
 ##############################
 ###  GLOBAL PARAMETERS //  ###
 ##############################
