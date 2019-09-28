@@ -70,12 +70,15 @@ if ( suppressWarnings(suppressPackageStartupMessages(require("optparse"))) == FA
 script <- sub("--file=", "", basename(commandArgs(trailingOnly=FALSE)[4]))
 
 #---> DESCRIPTION <---#
-description <- "Generates an ASCII-style pileup alignment of read alignments in one or more BAM files against one or more regions specified in a BED file.\n"
+description <- "Generates an ASCII-style pileup alignment of read alignments in one or more BAM
+files against one or more regions specified in a BED file.\n"
 author <- "Author: Alexander Kanitz, Biozentrum, University of Basel; alexander.kanitz@alumni.ethz.ch"
+affiliation <- "Affiliation: Biozentrum, University of Basel"
+email <- "Email: alexander.kanitz@alumni.ethz.ch"
 version <- "Version: 1.0.0 (28-SEP-2019)"
 requirements <- c("optparse", "rtracklayer", "GenomicFeatures", "GenomicAlignments")
 requirements_txt <- paste("Requires:", paste(requirements, collapse=", "), sep=" ")
-msg <- paste(description, author, version, requirements_txt, sep="\n")
+msg <- paste(description, author, affiliation, email, version, requirements_txt, sep="\n")
 
 #---> COMMAND-LINE ARGUMENTS <---#
 ## List of allowed/recognized arguments
@@ -85,7 +88,8 @@ option_list <- list(
             action="store",
             type="character",
             default=NULL,
-            help="Required: Path to BED file of query regions. Consider the `--maximum-region-width` parameter.",
+            help="Required: Path to BED file of query regions. Consider the
+            `--maximum-region-width` parameter.",
             metavar="file"
         ),
         make_option(
@@ -93,7 +97,10 @@ option_list <- list(
             action="store",
             type="character",
             default=NULL,
-            help="Required: Path to BAM file containing the alignments to be visualized against the query region(s). It is possible to use glob wildcards to select multiple BAM files at once. However, the feature is experimental and may lead to inconsistencies if a read contains an indel.",
+            help="Required: Path to BAM file containing the alignments to be visualized against
+            the query region(s). It is possible to use glob wildcards to select multiple BAM files
+            at once. However, the feature is experimental and may lead to inconsistencies if a
+            read contains an indel.",
             metavar="file"
         ),
         make_option(
@@ -101,7 +108,10 @@ option_list <- list(
             action="store",
             type="character",
             default=NULL,
-            help="Reference genome sequence in FASTA format. The file *MUST* be compressed with BGZIP. If supplied, the reference sequence for the query region(s) will be added to the output. Note that on the first run with a specific reference genome file, an FAI index is generated which will take some time.",
+            help="Reference genome sequence in FASTA format. The file *MUST* be compressed with
+            BGZIP. If supplied, the reference sequence for the query region(s) will be added to
+            the output. Note that on the first run with a specific reference genome file, an FAI
+            index is generated which will take some time.",
             metavar="file"
         ),
         make_option(
@@ -109,7 +119,10 @@ option_list <- list(
             action="store",
             type="character",
             default=NULL,
-            help="Annotation file in GFF/GTF format used to annotate sequences. If supplied, features overlapping the query region(s) will be visualized in the output. Ensure that the argument to option `annotation-name-field` corresponds to a field in the annotations, otherwise the script will fail.",
+            help="Annotation file in GFF/GTF format used to annotate sequences. If supplied,
+            features overlapping the query region(s) will be visualized in the output. Ensure that
+            the argument to option `annotation-name-field` corresponds to a field in the
+            annotations, otherwise the script will fail.",
             metavar="file"
         ),
         make_option(
@@ -117,7 +130,9 @@ option_list <- list(
             action="store",
             type="character",
             default=getwd(),
-            help="Output directory. One output file will be created for each region in `--bed` and the filenames will be generated from the basenames of the supplied BAM file(s) and the name field (4th column) of the BED file. [default \"%default\"]",
+            help="Output directory. One output file will be created for each region in `--bed` and
+            the filenames will be generated from the basenames of the supplied BAM file(s) and the
+            name field (4th column) of the BED file. [default \"%default\"]",
             metavar="dir"
         ),
         make_option(
@@ -125,7 +140,8 @@ option_list <- list(
             action="store",
             type="integer",
             default=200,
-            help="Maximum input region width. Use with care as wide regions will use excessive resources. [default %default]",
+            help="Maximum input region width. Use with care as wide regions will use excessive
+            resources. [default %default]",
             metavar="int"
         ),
         make_option(
@@ -139,7 +155,9 @@ option_list <- list(
             action="store",
             type="integer",
             default=1,
-            help="Alignments of reads with less copies than the specified number will not be printed. Option is not considered if `do-not-collapse-alignments` is set. [default %default]",
+            help="Alignments of reads with less copies than the specified number will not be
+            printed. Option is not considered if `do-not-collapse-alignments` is set.
+            [default %default]",
             metavar="int"
         ),
         make_option(
@@ -147,7 +165,8 @@ option_list <- list(
             action="store",
             type="character",
             default="Name",
-            help="Annotation field used to populate the `name` column in the output. [default \"%default\"]",
+            help="Annotation field used to populate the `name` column in the output.
+            [default \"%default\"]",
             metavar="str"
         ),
         make_option(
