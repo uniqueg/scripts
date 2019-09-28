@@ -7,7 +7,7 @@ more regions specified in a BED file.
 
 ## Help screen
 
-```sh
+```console
 Usage: ./bed_bam_ascii_alignment_pileup.R [OPTIONS] --bed <PATH> --bam <PATH>
 
 Generates an ASCII-style pileup of read alignments in one or more BAM files against one or more regions specified in a BED file.
@@ -59,7 +59,7 @@ Options:
 
 ## Example output
 
-```sh
+```console
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>	hsa-let-7a-1
 ....>>>>>>>>>>>>>>>>>>>>>>.....................................................	hsa-let-7a-5p
 .......................................................>>>>>>>>>>>>>>>>>>>>>...	hsa-let-7a-3p
