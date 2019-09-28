@@ -70,7 +70,7 @@ if ( suppressWarnings(suppressPackageStartupMessages(require("optparse"))) == FA
 script <- sub("--file=", "", basename(commandArgs(trailingOnly=FALSE)[4]))
 
 #---> DESCRIPTION <---#
-description <- "Generates an ASCII-style pileup alignment of read alignments in one or more BAM files against one or more regions specified in a BED file.\n"
+description <- "Generates an ASCII-style pileup of read alignments in one or more BAM files against one or more regions specified in a BED file.\n"
 author <- "Author: Alexander Kanitz, Biozentrum, University of Basel; alexander.kanitz@alumni.ethz.ch"
 version <- "Version: 1.0.0 (28-SEP-2019)"
 requirements <- c("optparse", "rtracklayer", "GenomicFeatures", "GenomicAlignments")
