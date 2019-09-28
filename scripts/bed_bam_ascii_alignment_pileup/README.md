@@ -10,9 +10,12 @@ more regions specified in a BED file.
 ```console
 Usage: ./bed_bam_ascii_alignment_pileup.R [OPTIONS] --bed <PATH> --bam <PATH>
 
-Generates an ASCII-style pileup alignment of read alignments in one or more BAM files against one or more regions specified in a BED file.
+Generates an ASCII-style pileup alignment of read alignments in one or more BAM
+files against one or more regions specified in a BED file.
 
-Author: Alexander Kanitz, Biozentrum, University of Basel; alexander.kanitz@alumni.ethz.ch
+Author: Alexander Kanitz
+Affiliation: Biozentrum, University of Basel
+Email: alexander.kanitz@alumni.ethz.ch
 Version: 1.0.0 (28-SEP-2019)
 Requires: optparse, rtracklayer, GenomicFeatures, GenomicAlignments
 
