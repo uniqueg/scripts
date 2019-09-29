@@ -46,7 +46,9 @@
 if (suppressWarnings(suppressPackageStartupMessages(require("optparse"))) == FALSE) { stop("Package 'optparse' required!\nExecution aborted.") }
 
 #---> GET SCRIPT NAME <---#
-script <- sub("--file=", "", basename(commandArgs(trailingOnly=FALSE)[4]))
+args.all <- commandArgs(trailingOnly = FALSE)
+name.field <- "--file="
+script <- basename(sub(name.field, "", args.all[grep(name.field, args.all)]))
 
 #---> DESCRIPTION <---#
 description <- "Generates an ASCII-style pileup of read alignments in one or more BAM files
@@ -55,7 +57,7 @@ author <- "Author: Alexander Kanitz"
 affiliation <- "Affiliation: Biozentrum, University of Basel"
 email <- "Email: alexander.kanitz@alumni.ethz.ch"
 version <- "Version: 1.0.0 (29-SEP-2019)"
-requirements <- c("optparse", "Biostrings", "rtracklayer", "GenomicAlignments", "tools")
+requirements <- c("optparse", "rtracklayer", "GenomicAlignments", "tools")
 requirements_txt <- paste("Requires:", paste(requirements, collapse=", "), sep=" ")
 msg <- paste(description, author, affiliation, email, version, requirements_txt, sep="\n")
 notes <- "Notes:

@@ -8,13 +8,12 @@ against one or more regions specified in a BED file.
 ## Usage
 
 ```sh
-./bed_bam_ascii_alignment_pileup.R [-hv] [OPTIONS] bed bam [bam2 ...]
+ascii_alignment_pileup.R [-hv] [OPTIONS] bed bam [bam2 ...]
 ```
 
 ## Requirements
 
 * R 3.6.0
-* Biostrings 2.52.0
 * GenomicAlignments 1.20.0
 * optparse 1.6.2
 * rtracklayer 1.44.0
@@ -22,10 +21,10 @@ against one or more regions specified in a BED file.
 
 ## Input files
 
-* BED file
-* BAM file(s)
-* Optional: FASTA file compressed with [`bgzip`](http://www.htslib.org/doc/bgzip.html)
-* Optional: GFF/GTF file
+* [BED](https://www.ensembl.org/info/website/upload/bed.html) file
+* [BAM](https://samtools.github.io/hts-specs/) file(s)
+* Optional: [FASTA](https://en.wikipedia.org/wiki/FASTA_format) file compressed with [`bgzip`](http://www.htslib.org/doc/bgzip.html)
+* Optional: [GFF/GTF/GFF3](https://en.wikipedia.org/wiki/General_feature_format) file
 
 ## Output files
 
@@ -112,6 +111,20 @@ TACCATGAGGTAGTAGGTTGTATAGTT.....................................................
 -v, --verbose
         Print log messages to STDOUT.
 ```
+
+## Tags
+
+* BED
+* BAM
+* GFF
+* FASTA
+* alignments
+* pileup
+* ASCII
+* microRNA
+* miRNA
+* miR
+* isomiR
 
 ## Version
 
