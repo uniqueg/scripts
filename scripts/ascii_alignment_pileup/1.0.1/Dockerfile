@@ -53,7 +53,6 @@ ENV PATH="${WORKDIR}:${PATH}"
 
 ##### COPY #####
 COPY ./ascii_alignment_pileup.R ${WORKDIR}
-COPY ./tests ${WORKDIR}/tests
 
 ##### USER #####
 RUN groupadd -r ${GROUP} && useradd --no-log-init -r -g ${GROUP} ${USER}
