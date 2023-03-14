@@ -1,0 +1,93 @@
+/* *******************
+*   TO DO
+* !!!!!!! FIND SOME UBIQUITOUS RETURN FILE, ELSE THE WHOLE FUNCTION WILL NOT WORK!!!!!!!!!
+* Include parameters Species, Paired, Strand in components
+* Change segemehl python wrapper, such that decision betw 3 and 5 adpt will be correctly made
+* Include all segemehl paths (index, genome, blabla) here and in component.xml
+********************** */
+
+
+/* ************************
+* NAME: processFASTQ_part_2.and
+* AUTHOR: Christina Herrmann
+* DATE: 20. AUG 2013
+* DESCRIPTION:
+* This function is called by processFASTQ_part_1.and after barcodes have been removed (if applicable)
+* processFASTQ_part2.and includes the components segemehl, sam_to_bam, summarize_overlaps
+************************* */
+
+
+function ProcessFASTQ_2(optional BinaryFolder infolder, optional BinaryFile infile, int Sample2, string Species, string Strand, string Paired, string Adpt_5, string Adpt_3) -> (BinaryFolder part_2)
+{
+	std.echo("Part 2: Processing sample number", Sample2, sep=" ")
+	
+/* *************************
+* A. SEGEMEHL
+* DESCRIPTION:
+* Perform mapping of reads to appropriate reference set (genome or transcriptome)
+* Remove 3' or 5' adapters if specified
+************************* */
+
+  //// A.1 SEGEMEHL FOR GENOME MAPPING
+  	// Call component segemehl for GENOME mapping (use defaults for segemehl, index, genome, etc. as stored in component.xml);
+	// input: FASTQ infile (if file was FASTQ from beginning and no barcodes were given, or if barcodes have been removed)
+	// or FASTQ infolder (if file was not FASTQ at beginning and no barcodes were given)
+	
+		std.echo("Segemehl for sample", Sample2, "called with 5'-Adapter", Adpt_5, "and 3'-Adapter", Adpt_3, sep=" ")
+		
+		segem_gen = segemehl( infolder = infolder, infile = infile, prime3 = Adpt_3, prime5 = Adpt_5, threads = 14, differences = 1, accuracy = 90, @host="q_zavolan")
+    	OUTPUT(segem_gen.outfolder)
+		OUTPUT(segem_gen.unmatched_folder)
+		
+	
+  //// A.2 SEGEMEHL FOR TRANSCRIPTOME MAPPING	
+	// Call component segemehl for TRANSCRIPTOME mapping (set index and genome as different from the GENOME mapping default);
+    // input: FASTQ infile (if file was FASTQ from beginning and no barcodes were given, or if barcodes have been removed)
+	// or FASTQ infolder (if file was not FASTQ at beginning and no barcodes were given)
+	
+    	segem_trx = segemehl( infolder = infolder, infile = infile, index = "/import/bc2/home/zavolan/kanitz/resources/annotations/transcriptomes/human/gencode.v17.patches/gencode.v17.patches.transcripts_segemehl_index.idx", genome = "/import/bc2/home/zavolan/kanitz/resources/annotations/transcriptomes/human/gencode.v17.patches/gencode.v17.patches.transcripts.fa", prime3 = Adpt_3, prime5 = Adpt_5, threads = 14, differences = 1, accuracy = 90, @host="q_zavolan")
+   		OUTPUT(segem_trx.outfolder)
+    	OUTPUT(segem_trx.unmatched_folder)
+
+
+/* *************************
+* B. SAM TO BAM
+* DESCRIPTION:
+* Convert the SAM output file from segemehl to a sorted, indexed BAM file
+************************* */
+
+  //// B.1 SAM TO BAM FOR GENOME
+	// Call component sam_to_bam for GENOME; input: segem_gen.outfolder
+        
+    	bam_gen = sam_to_bam(infolder = segem_gen.outfolder, samtools_dir="/import/bc2/soft/bin/samtools", @host="long")
+    	OUTPUT(bam_gen.outfolder)
+    	
+
+  //// B.2 SAM TO BAM FOR TRANSCRIPTOME
+	// Call component sam_to_bam for TRANSCRIPTOME file; input: segem_trx.outfolder
+	
+        bam_trx = sam_to_bam(infolder = segem_trx.outfolder, samtools_dir="/import/bc2/soft/bin/samtools", @host="long")
+        OUTPUT(bam_trx.outfolder)
+
+
+/* *************************
+* C. SUMMARIZE OVERLAPS
+* DESCRIPTION:
+* Count reads that overlap with appropriate reference
+* summarize_overlaps from Bioconductor
+************************* */
+  
+  //// C.1 SUMMARIZE_OVERLAPS FOR GENOME
+  
+		count_table = summarize_overlaps(infolder = bam_gen.outfolder, @host="long")
+		OUTPUT(count_table.outfolder)
+
+
+/* *************************
+* D. RETURN
+* DESCRIPTION:
+* Return for function processFASTQ_2
+************************* */
+     	return record(part_2 = count_table.outfolder)
+}
+

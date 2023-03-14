@@ -1,0 +1,49 @@
+###################################
+# NAME: Params_krini
+# DESCRIPTION: Contains parameters which have to remain fixed during one KRINI analysis/experiment
+#				Parameters retrieved from KRINI GUI
+###################################
+
+# A. IN/OUTPUT/LOG
+
+ANALYSIS: /import/bc2/home/zavolan/cherrmann/PIPELINE/TEST_OUTPUT # path/to/folder/where/complete/output/logs/etc/should/be/stored
+CSVFILE: /import/bc2/home/zavolan/cherrmann/PIPELINE/TEST_INPUT/test.csv # path to csv file
+DATA: /import/bc2/home/zavolan/cherrmann/PIPELINE/TEST_OUTPUT/DATA
+LOG: /import/bc2/home/zavolan/cherrmann/PIPELINE/TEST_OUTPUT/LOG
+NETWORK: /import/bc2/home/zavolan/cherrmann/PIPELINE/TEST_OUTPUT/NETWORK
+
+
+# B. FASTQ_DUMP
+FASTQ_DUMP_DIR: /import/bc2/home/zavolan/kanitz/soft/bin/fastq-dump
+FASTQ_DUMP_MIN_READ_LEN: 1
+
+# C. BARCODE_SPLIT
+BARCODE_SCRIPT: /import/bc2/home/zavolan/cherrmann/PIPELINE/components/barcode_split/barcode_split_NEW_AK.pl
+BARCODE_MISMATCHES: " " # empty STRING for default, else a number saved as STRING
+
+# D. SEGEMEHL
+# Here all the paths to the genome/transcriptome/index files have to be specified, each for human (HS) and mouse (MM)
+SEGEM_DIR: /import/bc2/home/zavolan/kanitz/soft/bin/segemehl.x
+SEGEM_GEN_IDX_HS: /import/bc2/home/zavolan/kanitz/resources/annotations/genomes/human/hg19/compiled/hg19_segemehl_index.idx
+SEGEM_GEN_HS: /import/bc2/home/zavolan/kanitz/resources/annotations/genomes/human/hg19/compiled/hg19.fa
+SEGEM_TRX_IDX_HS: /import/bc2/home/zavolan/kanitz/resources/annotations/transcriptomes/human/gencode.v17/gencode.v17.transcripts_segemehl_index.idx
+SEGEM_TRX_HS: /import/bc2/home/zavolan/kanitz/resources/annotations/transcriptomes/human/gencode.v17/gencode.v17.transcripts.fa
+SEGEM_GEN_IDX_MM: " "
+SEGEM_GEN_MM: " "
+SEGEM_TRX_IDX_MM: " "
+SEGEM_TRX_MM: " "
+SEGEMEHL_THREADS: 14
+SEGEMEHL_DIFFERENCES: 1
+SEGEMEHL_ACCURACY: 90
+SEGEMEHL_CLIPACC: 100
+
+# E. SAM_TO_BAM
+SAMTOOLS_DIR: /import/bc2/soft/bin/samtools
+
+# F. SUMMARIZE_OVERLAPS
+SUMM_OVERLAPS_GTF: /import/bc2/home/zavolan/kanitz/resources/annotations/transcriptomes/human/gencode.v17.patches/gencode.v17.patches.pseudoexons.gtf
+SUMM_OVERLAPS_INDEX: FALSE
+SUMM_OVERLAPS_GENOME: NA
+SUMM_OVERLAPS_MODE: IntersectionStrict
+SUMM_OVERLAPS_IGN_STRAND: FALSE
+

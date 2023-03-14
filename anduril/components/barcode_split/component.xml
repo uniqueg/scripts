@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<component>
+    <name>barcode_split</name>
+    <version>1.1</version>
+    <doc>FASTX Toolkit, barcode splitter in barcode_split.pl (adapted by Alex Kanitz)
+    	This program splits a FASTQ/FASTA file into several smaller files, based on barcode matching</doc>
+    <launcher type="python">
+        <argument name="file" value="barcode_split.py" />
+    </launcher>
+    <requires>URL="http://www.python.org/not" type="manual">python</requires>
+    <inputs>
+        <input name="infile" type="BinaryFile" optional="true">
+            <doc>fastq file, user input</doc>
+        </input>
+        <input name="infolder" type="BinaryFolder" optional="true">
+            <doc>fastq file in its own folder, output from previous anduril component fastq-dump</doc>
+        </input>
+    </inputs>
+    <outputs>
+        <output name="outfolder" type="BinaryFolder">
+            <doc> fastq files split depending on barcode, all files in one folder, barcodes removed </doc>
+        </output>
+    </outputs>
+    <parameters>
+    <parameter name="barcode_split_dir" type="string" default="">
+	    <doc> path to script barcode_split.pl</doc>
+	</parameter>
+    	<parameter name="barcodes" type="string" default="N/A">
+	    <doc> barcodes separated by | (pipe)</doc>
+	</parameter>
+	<parameter name="mismatches" type="string" default=" ">
+            <doc> number of allowed mismatches, default set in perl script to 30% </doc>
+        </parameter>
+        <parameter name="eol" type="string" default="5_END">
+            <doc> if 5_END, barcodes should be checked for at 5'-end of read, if 3_END, barcodes 3'</doc>
+        </parameter>
+    </parameters>
+</component>

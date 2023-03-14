@@ -1,0 +1,3 @@
+<input name="${infolder}" type="${BinaryFolder}" optional="${true_or_false}">
+	<doc>${input_folder_description}</doc>
+</input>

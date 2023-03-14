@@ -1,0 +1,92 @@
+/* **********************************************************
+* AUTHORS: Foivos Gypas
+* DATE: 29-SEP-2014
+* AFFILIATION: Biozentrum, University of Basel
+********************************************************** */
+
+// ---> PREPROCESSING <---
+
+// Import input file
+data = INPUT(path="{{INPUT_FILE_PATH}}")
+
+// Remove PolyA tail
+cut_adapt = cut_adapt(infile=data, adapter="{{ADAPT_3}}", front="{{ADAPT_5}}", cut_adapt_dir="{{CUT_ADAPT_DIR}}", error_rate={{CUT_ADAPT_ERROR_RATE}}, overlap={{CUT_ADAPT_MIN_OVERLAP}}, minimum_length={{MIN_READ_LENGTH}}, @host="long")
+
+// Collapse reads
+fastx_collapser = fastx_collapser(infolder=cut_adapt.outfolder, fastx_collapser_dir="{{FASTX_COLLAPSER_DIR}}", @host="long_hm")
+
+// ---> MAPPING <---
+
+// Map reads to genome
+segemehl_gen = segemehl(infolder=fastx_collapser.outfolder, segemehl_dir="{{SEGEMEHL_DIR}}", index="{{GENOME_INDEX}}", fasta="{{GENOME_SEQ}}", differences={{SEGEMEHL_DIFFERENCES}}, accuracy={{SEGEMEHL_ACCURACY}}, threads={{SEGEMEHL_GEN_THREADS}}, @host="long_hm")
+
+// Map reads to transcriptome
+segemehl_trx = segemehl(infolder=fastx_collapser.outfolder, segemehl_dir="{{SEGEMEHL_DIR}}", index="{{TRX_INDEX}}", fasta="{{TRX_SEQ}}", differences={{SEGEMEHL_DIFFERENCES}}, accuracy={{SEGEMEHL_ACCURACY}}, threads={{SEGEMEHL_TRX_THREADS}}, @host="long_hm")
+
+// ---> POST-PROCESSING <---
+
+// GENOME: Split SAM file into body and header
+sam_header_body_gen = sam_header_body(infolder=segemehl_gen.outfolder, sam_header_body_dir="{{SAM_HEADER_BODY_DIR}}", @host="long")
+
+// TRANSCRIPTOME: Split SAM file into body and header
+sam_header_body_trx = sam_header_body(infolder=segemehl_trx.outfolder, sam_header_body_dir="{{SAM_HEADER_BODY_DIR}}", @host="long")
+
+// GENOME: Merge SAM headers from genome and transcriptome alignments, add comments
+sam_merge_headers = sam_merge_headers(infolder_sam_genome_header=sam_header_body_gen.outfolder_head, infolder_sam_transcriptome_header=sam_header_body_trx.outfolder_head, sam_merge_headers_dir="{{SAM_MERGE_HEADERS_DIR}}", comment_lines="{{SAM_MERGE_HEADERS_COMMENT_LINES}}" , @host="short")
+
+// TRANSCRIPTOME: Add comments to SAM header
+sam_annotate_header = sam_annotate_header(infolder=sam_header_body_trx.outfolder_head, sam_annotate_header_dir="{{SAM_ANNOTATE_HEADER_DIR}}", comment_lines="{{SAM_ANNOTATE_HEADER_COMMENT_LINES}}" , @host="short")
+
+// GENOME: Convert transcriptome alignments to genome space
+sam_trx_to_sam_gen = sam_trx_to_sam_gen(infolder=sam_header_body_trx.outfolder_body, sam_trx_to_sam_gen_dir="{{SAM_TRX_TO_SAM_GEN_DIR}}", exons="{{SAM_TRX_TO_SAM_GEN_EXONS_BED}}", min_overlap={{SAM_TRX_TO_SAM_GEN_MIN_OVERLAP}}, strand_info="{{SAM_TRX_TO_SAM_GEN_STRAND_INFO}}", @host="long")
+
+// GENOME: Concatenate and sort genome alignments and transcriptome alignments in genome space
+sam_cat_sort = sam_cat_sort(infolder=sam_header_body_gen.outfolder_body, infolder1=sam_trx_to_sam_gen.outfolder, sam_cat_sort_dir="{{SAM_CAT_SORT_DIR}}", @host="long_hm")
+
+// GENOME: Filter duplicates, inferior alignments and multimappers
+sam_filter_gen = sam_filter_gen(infolder=sam_cat_sort.outfolder, infolder_head=sam_merge_headers.outfolder, keep_mm="{{KEEP_MM}}", sam_filter_gen_dir="{{SAM_FILTER_GEN_DIR}}", @host="long")
+
+// TRANSCRIPTOME: Filter inferior alignments and multimappers
+sam_filter_trx = sam_filter_trx(infolder=sam_header_body_trx.outfolder_body, infolder_head=sam_annotate_header.outfolder, infolder_mm=sam_filter_gen.outfolder_mm, infolder_nm=sam_filter_gen.outfolder_nm, sam_filter_trx_dir="{{SAM_FILTER_TRX_DIR}}", keep_mm="{{KEEP_MM}}", strand_info="{{SAM_TRX_TO_SAM_GEN_STRAND_INFO}}", @host="long")
+
+// GENOME: Uncollapse reads
+sam_uncollapse_gen = sam_uncollapse(infolder=sam_filter_gen.outfolder, sam_uncollapse_dir="{{SAM_UNCOLLAPSE_DIR}}", @host="long")
+
+// TRANSCRIPTOME: Uncollapse reads
+sam_uncollapse_trx = sam_uncollapse(infolder=sam_filter_trx.outfolder, sam_uncollapse_dir="{{SAM_UNCOLLAPSE_DIR}}", @host="long")
+
+// GENOME: Calculate read length statistics
+sam_read_length_stats_gen = sam_read_length_stats(infolder=sam_uncollapse_gen.outfolder, @host="long_hm")
+
+// TRANSCRIPTOME: Calculate read length statistics
+sam_read_length_stats_trx = sam_read_length_stats(infolder=sam_uncollapse_trx.outfolder, @host="long_hm")
+
+// GENOME: SAM to NAME sorted BAM (version without index)
+sam_to_bam_name_simple_gen = sam_to_bam_name_simple(infolder=sam_uncollapse_gen.outfolder, samtools_dir="{{SAMTOOLS_DIR}}", @host="long_hm")
+
+// TRANSCRIPTOME: SAM to NAME sorted BAM (version without index)
+sam_to_bam_name_simple_trx = sam_to_bam_name_simple(infolder=sam_uncollapse_trx.outfolder, samtools_dir="{{SAMTOOLS_DIR}}", @host="long_hm")
+
+// GENOME: BAM to SAM
+bam_to_sam_gen = bam_to_sam(infolder=sam_to_bam_name_simple_gen.outfolder, samtools_dir="{{SAMTOOLS_DIR}}", @host="long_hm")
+
+// TRANSCRIPTOME: BAM to SAM
+bam_to_sam_trx = bam_to_sam(infolder=sam_to_bam_name_simple_trx.outfolder, samtools_dir="{{SAMTOOLS_DIR}}", @host="long_hm")
+
+// GENOME: Rename/Shuffle Reads
+rename_uncollapsed_gen = rename_uncollapsed(infolder=bam_to_sam_gen.outfolder, @host="long")
+
+// TRANSCRIPTOME: Rename/Shuffle Reads
+rename_uncollapsed_trx = rename_uncollapsed(infolder=bam_to_sam_trx.outfolder, @host="long")
+
+// GENOME: Compress alignments, sort and index
+sam_to_bam_gen = sam_to_bam(infolder=rename_uncollapsed_gen.outfolder, samtools_dir="{{SAMTOOLS_DIR}}", @host="long_hm")
+
+// TRANSCRIPTOME: Compress alignments, sort and index
+sam_to_bam_trx = sam_to_bam(infolder=rename_uncollapsed_trx.outfolder, samtools_dir="{{SAMTOOLS_DIR}}", @host="long_hm")
+
+// GENOME: Re-sort BAM alignments by name
+bam_name_sort_gen = bam_sort(infile=INPUT(path=std.fRead(sam_to_bam_gen.bam)), by_name=true, @host="long_hm")
+
+// TRANSCRIPTOME: Re-sort BAM alignments by name
+bam_name_sort_trx = bam_sort(infile=INPUT(path=std.fRead(sam_to_bam_trx.bam)), by_name=true, @host="long_hm")

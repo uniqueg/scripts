@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<component>
+    <name>sam_to_bam</name>
+    <!--<version>1.0</version>-->
+    <doc>
+    creates sorted indexed bam file from sam file
+    </doc>
+    <launcher type="python">
+        <argument name="file" value="sam_to_bam.py" />
+    </launcher>
+    <requires>URL="http://www.python.org/not" type="manual">python</requires>
+    <inputs>
+        <input name="infolder" type="BinaryFolder" optional= "true" >
+            <doc>sam file in folder, Anduril output from component: remove_multi_mappers</doc>
+        </input>
+	<input name="infile" type="BinaryFile" optional = "true" >
+            <doc>sam file, user input</doc>
+        </input>
+    </inputs>
+    <outputs>
+        <output name="outfolder" type="BinaryFolder">
+            <doc> sorted bam file and bam.bai index file</doc>
+        </output>
+    </outputs>
+    <parameters>
+        <parameter name="samtools_dir" type="string" default="/import/bc2/soft/bin/samtools">
+            <doc> path to samtools </doc>
+        </parameter>
+    </parameters>
+</component>
+

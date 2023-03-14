@@ -1,0 +1,800 @@
+>cel-let-7 (-42.90)   [cel-let-7-5p:17-38] [cel-let-7-3p:56-80]
+
+------uaca    gga             U              ---  aaua 
+          cugu   uccggUGAGGUAG AGGUUGUAUAGUUu   gg    u
+          ||||   ||||||||||||| ||||||||||||||   ||     
+          gaca   aggcCAUUCCAUC UUUAACGUAUCAAG   cc    u
+agcuucucaa    --g             U              Ugg  acca 
+
+>cel-lin-4 (-41.80)   [cel-lin-4-5p:16-36] [cel-lin-4-3p:55-75]
+
+--a     ---   g    -uU   U    C    A       u   - u 
+   ugcuu   ccg ccug   CCC GAGA CUCA GUGUGAg gua c a
+   |||||   ||| ||||   ||| |||| |||| ||||||| ||| |  
+   acgag   ggc ggac   GGG CUCU GGGU CACAcuu cgu g u
+uag     uuu   a    CAU   C    C    C       -   a u 
+
+>cel-mir-1 (-41.40)   [cel-miR-1-5p:21-42] [cel-miR-1-3p:61-81]
+
+aaagug    ua   ag           C      GC     -    au 
+      accg  ccg  cugCAUACUUC UUACAU  CCAUA cuau  c
+      ||||  |||  ||||||||||| ||||||  ||||| ||||  a
+      uggu  ggc  gAUGUAUGAAG AAUGUA  GGUau ggua  u
+---uga    gg   aa           A      -A     a    aa 
+
+>cel-mir-2 (-38.40)   [cel-miR-2-5p:20-41] [cel-miR-2-3p:61-83]
+
+uaa     -au    aa   -         -   GGU       -uu -  a 
+   acagu   acag  agc CAUCAAAGC GGU   UGAUGUG   g ca a
+   |||||   ||||  ||| ||||||||| |||   |||||||   | || u
+   uguca   uguc  uCG GUAGUUUCG CCG   ACUAUac   c gu u
+---     cgu    cg   U         A   -AC       uuu a  a 
+
+>cel-mir-34 (-37.00)   [cel-miR-34-5p:16-37] [cel-miR-34-3p:53-74]
+
+--------c    --a   c   -a A       -U   U     G   -  uau 
+         ggac   aug ucg  g GGCAGUG  GGU AGCUG UUG ca   u
+         ||||   ||| |||  | |||||||  ||| ||||| ||| ||    
+         ccug   uac agc  C CCGUCAC  CCA UCGGC Aac gu   u
+aaguuucua    cug   a   CC A       UU   -     -   a  ucc 
+
+>cel-mir-35 (-54.30)   [cel-miR-35-5p:22-44] [cel-miR-35-3p:61-82]
+
+ucuc   uc                       U  A A      c   cc 
+    gga  agaucgagccauUGCUGGUUUCU CC C GUGGUA uuu  a
+    |||  ||||||||||||||||||||||| || | |||||| |||   
+    ccu  ucuagcucggUGACGAUCAAAGG GG G CACUau aag  u
+----   uu                       U  - C      c   au 
+
+>cel-mir-36 (-50.30)   [cel-miR-36-5p:20-42] [cel-miR-36-3p:61-82]
+
+ca    u        a   C  C           CA   C     - au 
+  ccgc gucgggga ccg GC AAUUUUCGCUU  GUG UAgac c  c
+  |||| |||||||| ||| || |||||||||||  ||| ||||| |  c
+  ggcg cagccccu gGU CG UUAAAAGUGGG  CAC aucug g  a
+-a    -        g   A  C           -C   U     u aa 
+
+>cel-mir-37 (-44.70)   [cel-miR-37-5p:22-42] [cel-miR-37-3p:61-82]
+
+uucu       - uu      g  UG     CCGU G     C    uucu 
+    agaaacc c  ggacca UG  GGUGU    U CGGUG uaca    c
+    ||||||| |  |||||| ||  |||||    | ||||| ||||     
+    ucuuugg g  ccuggU AC  UCACA    G GCCAC augu    u
+----       u cu      G  GU     -AGU G     U    cuaa 
+
+>cel-mir-38 (-49.90)   [cel-miR-38-5p:17-38] [cel-miR-38-3p:58-79]
+
+     - -                    UC G        -ac  auc 
+gugag c cagguccuguUCCGGUUUUU  C UGGUGAUA   gc   c
+||||| | ||||||||||||||||||||  | ||||||||   ||    
+uacuc g guccaggaUGAGGUCAAAAA  G GCCACUau   ug   a
+     a u                    GA G        cuc  aaa 
+
+>cel-mir-39 (-43.30)   [cel-miR-39-5p:15-36] [cel-miR-39-3p:55-76]
+
+u     g      c         -  U      A    g    u 
+ auacc agagcc AGCUGAUUU CG CUUGGU AUAa cucg c
+ ||||| |||||| ||||||||| || |||||| |||| ||||  
+ ugugg ucucgG UCGACUAAA GU GGGCCA Uauu gagu a
+c     -      U         U  -      C    a    u 
+
+>cel-mir-40 (-46.20)   [cel-miR-40-5p:16-38] [cel-miR-40-3p:56-77]
+
+u     --        c   G          A  A     a   au 
+ ccugu  ccgcaccu AGU GAUGUAUGCC UG UGAUA gau  c
+ |||||  |||||||| ||| |||||||||| || ||||| |||  a
+ ggaca  ggcguggA UCG CUACAUGUGG GC ACUau cua  g
+u     ug        A   A          -  C     c   aa 
+
+>cel-mir-41 (-40.93)   [cel-miR-41-5p:17-39] [cel-miR-41-3p:61-82]
+
+----  g   cag      u           -    CA       auacuuc 
+    gg ucc   agaccu GGUGGUUUUUC UCUG  GUGAUAg       u
+    || |||   |||||| ||||||||||| ||||  |||||||       a
+    cc agg   ucuggA CCACUAAAAAG GGGC  CACUauc       a
+uccu  g   ---      U           U    --       gcucaac 
+
+>cel-mir-42 (-41.70)   [cel-miR-42-5p:14-38] [cel-miR-42-3p:60-81]
+
+----uucgc                 U   UUUU        ---uu  cuu 
+         ggaccuuuGUGGGUGUU GCU    CGGUGAAG     gu   c
+         ||||||||||||||||| |||    ||||||||     ||    
+         ccuggAGACAUCUACAA UGG    GCCACUuc     cg   c
+ggggaaaaa                 U   ----        uucuu  aug 
+
+>cel-mir-43 (-47.00)   [cel-miR-43-5p:21-44] [cel-miR-43-3p:61-83]
+
+-ua ug    uagu           U    -     A     U   -  aaa 
+   u  gcac    cgcccguGACA CAAG AAACU GUGAU AUG cc   c
+   |  ||||    ||||||||||| |||| ||||| ||||| ||| ||   c
+   a  cgug    gcgggCGCUGU GUUC UUUGA CACUA Uac gg   a
+uug gu    ----           C    A     -     -   a  gac 
+
+>cel-mir-44 (-42.10)   [cel-miR-44-5p:16-37] [cel-miR-44-3p:61-81]
+
+--     aau      u         -   GU        --   --g  a 
+  gagaa   ggccaa CUGGAUGUG CUC  UGGUCAUA  gac   uc a
+  |||||   |||||| ||||||||| |||  ||||||||  |||   || c
+  cucuu   ccgguU GACUUACAC GAG  AUCAGUau  uug   ag a
+au     cgu      C         A   --        ac   uca  c 
+
+>cel-mir-45 (-41.00)   [cel-miR-45-5p:15-36] [cel-miR-45-3p:61-81]
+
+---caccau      c          -   GU        aua    ccac 
+         gugcca gCUGGAUGUG CUC  UAGUCAUA   uccu    a
+         |||||| |||||||||| |||  ||||||||   ||||     
+         cgcggu CGACUUACAC GAG  AUCAGUau   agga    a
+uacguaagc      U          A   --        --c    acga 
+
+>cel-mir-46 (-39.00)   [cel-miR-46-5p:15-36] [cel-miR-46-3p:61-82]
+
+---cuga  ugaag           -CG     U      --u   -   c 
+       gg     cugAAGAGAGC   UCUAU GACAGU   caa gac a
+       ||     |||||||||||   ||||| ||||||   ||| ||| c
+       cc     gACUUCUCUCG   AGGUA CUGUcg   guu cug g
+uaacugg  uagua           CUG     -      ugu   g   a 
+
+>cel-mir-47 (-42.50)   [cel-miR-47-5p:19-40] [cel-miR-47-3p:61-82]
+
+gaga   -   ugaaa           A    -AU       --c    ac 
+    gcc gac     cugAAGAGAGC GUCU   UGACAGU   gguu  u
+    ||| |||     ||||||||||| ||||   |||||||   ||||   
+    cgg cug     gACUUCUCUCG CGGA   ACUGUca   cuaa  c
+--cc   u   uagua           -    GGU       uuu    ag 
+
+>cel-mir-48 (-34.50)   [cel-miR-48-5p:16-38] [cel-miR-48-3p:54-75]
+
+-----------      cc     cu    G      CA  A    C  au  a 
+           aaacuc  gggaa  UGAG UAGGCU  GU GAUG GA  ug a
+           ||||||  |||||  |||| ||||||  || |||| ||  || c
+           uuugag  cccuu  GCUC AUCCGA  CA CUAC cu  au g
+uuguuauggca      -a     AC    G      -C  C    A  cu  g 
+
+>cel-mir-49 (-38.50)   [cel-miR-49-5p:21-43] [cel-miR-49-3p:61-82]
+
+uuuugaaaaa    a     C       G     AU     C  ag aau 
+          gacc ccguc GCAGUUU UUGUG  GUGCU Ca  c   c
+          |||| ||||| ||||||| |||||  ||||| ||  |    
+          uugg gguAG CGUCGAA AGCAC  CACGA gu  g   a
+---uuuaguc    a     A       G     --     A  cu agu 
+
+>cel-mir-50 (-59.60)   [cel-miR-50-5p:16-39] [cel-miR-50-3p:58-79]
+
+------      -        c               UCU       g   uu 
+      cugccc gccggccg UGAUAUGUCUGGUAU   UGGGUUu aac  c
+      |||||| |||||||| |||||||||||||||   ||||||| |||  c
+      gacggg cggccggC GCUAUGCAGAUUAUA   GCCCaag uug  a
+guaaug      g        A               --C       -   cg 
+
+>cel-mir-51 (-33.30)   [cel-miR-51-5p:17-39] [cel-miR-51-3p:57-78]
+
+-------- -   gaaaa u    c    C   G  C  A       -    ggu 
+        g ucc     g ccgu UACC GUA CU CU UCCAUGU Uacu   c
+        | |||     | |||| |||| ||| || || ||||||| ||||    
+        c ggg     c ggcA GUGG CAU GA GA AGGUACa guga   a
+ucgaagua u   augag -    C    A   G  C  -       a    aaa 
+
+>cel-mir-52 (-25.70)   [cel-miR-52-5p:17-40] [cel-miR-52-3p:58-79]
+
+----       - --    a u C    GUA   A   UUC    C    - ag 
+    uccaacu c  uaac g c ACCC   CAU UGU   CGUG Uuga c  c
+    ||||||| |  |||| | | ||||   ||| |||   |||| |||| |   
+    ggguuga g  auug c G UGGG   GUA ACA   GCAC aacu g  g
+uucu       a uu    g C A    AAA   -   -UU    u    c aa 
+
+>cel-mir-53 (-32.20)   [cel-miR-53-5p:16-39] [cel-miR-53-3p:57-78]
+
+-----      - --    a u C       CAU    UU     C    -  u 
+     ccgauu c  ugac g c ACCCGUA   UUGU  CCGUG Uuga cu c
+     |||||| |  |||| | | |||||||   ||||  ||||| |||| ||  
+     ggcuga g  acug c G UGGGUAU   AACA  GGCAC aacu ga a
+uuuaa      u uu    a C C       -AU    -C     u    c  a 
+
+>cel-mir-54 (-35.30)   [cel-miR-54-5p:19-40] [cel-miR-54-3p:61-84]
+
+  g   cgc         A    -    -  CG   A A   uug    u 
+gu agu   gcucugacu GGAU AUGA GA  ACG G ACA   cuuu u
+|| |||   ||||||||| |||| |||| ||  ||| | |||   ||||  
+ca ucg   cgggacuGA CCUA UACU CU  UGC C Ugu   gaaa u
+  g   -au         G    A    U  AA   C A   uca    a 
+
+>cel-mir-55 (-35.30)   [cel-miR-55-5p:23-44] [cel-miR-55-3p:61-83]
+
+agauuu    cu   u   a            C   -   U    - uuuu 
+      ggaa  uaa ggg cuCGGCAGAAAC UAU CGG UAUA c    u
+      ||||  ||| ||| |||||||||||| ||| ||| |||| |    g
+      ccuu  auu ccc GAGUCGUCUUUG AUA GCC AUau g    g
+--uugu    --   c   -            A   U   C    c uaua 
+
+>cel-mir-56 (-42.00)   [cel-miR-56-5p:18-40] [cel-miR-56-3p:61-82]
+
+-ga  -  gu   u     UG     UC    U     UGU   -   ucc 
+   gc ca  guc guucu  GCGGA  CAUU UGGGU   Acc uca   u
+   || ||  ||| |||||  |||||  |||| |||||   ||| |||   a
+   cg gu  cag caaGA  CGCCU  GUAA GCCCA   Ugg agu   a
+cca  u  --   c     GU     UU    U     ---   c   uua 
+
+>cel-mir-57 (-32.50)   [cel-miR-57-5p:16-39] [cel-miR-57-3p:55-76]
+
+----------a   aca  c    c    C     A  G    G     u   a 
+           ucg   ug ucgu UACC UGUAG UC AGCU UGUGU uga a
+           |||   || |||| |||| ||||| || |||| ||||| ||| c
+           agc   ac agcA GUGG ACAUC AG UCGA GCAca acu a
+aaguauuuaga   caa  a    C    A     -  A    -     u   a 
+
+>cel-mir-58 (-36.80)   [cel-miR-58-5p:16-36] [cel-miR-58-3p:61-82]
+
+------     ucaua         C    CUU  C        a  -uc  c 
+      gcucg     uccauUGCC UACU   CG AUCUCAuc cu   gu c
+      |||||     ||||||||| ||||   || |||||||| ||   || a
+      cgagu     aggUAACGG AUGA   GC UAGAGUag ga   ca a
+ugagau     ----c         C    CUU  -        g  uac  u 
+
+>cel-mir-59 (-35.71)   [cel-miR-59-5p:20-41] [cel-miR-59-3p:63-85]
+
+       cuagau  g            -      AA     caaaagu    g 
+aguugau      au acaUCGUCCUGA AAACGA  CGGAA       ucaa a
+|||||||      || |||||||||||| ||||||  |||||       ||||  
+ucaacua      ua uGUAGUAGGACU UUUGCU  GCUuu       aguu u
+       --aaau  g            A      AA     -------    a 
+
+>cel-mir-60 (-35.00)   [cel-miR-60-5p:22-43] [cel-miR-60-3p:61-83]
+
+cucgaaaaccgcuugu               -    C    A      aca 
+                ucuugAACUGGAAGA GUGC AUAA AUcaug   a
+                ||||||||||||||| |||| |||| ||||||    
+                agaACUUGAUCUUUU CACG UAUU Uagugc   a
+----gcuaaagaguuc               A    -    A      aug 
+
+>cel-mir-61 (-50.50)   [cel-miR-61-5p:25-44] [cel-miR-61-3p:61-81]
+
+uuccauu         -             U    GG  U    C  -  uc 
+       aucgcugaa ccucgagaUGGGU ACGG  CU AGUC uu cc  c
+       ||||||||| ||||||||||||| ||||  || |||| || ||  g
+       uaguggcuu ggagcuCUACUCA UGCC  GA UCAG aa gg  u
+-------         u             U    AA  -    U  c  ua 
+
+>cel-mir-62 (-25.10)   [cel-miR-62:37-58]
+
+--           cu      -c     c 
+  gugaguuagau  cauauc  uuccg a
+  |||||||||||  ||||||  ||||| a
+  CAUUCGAUCUA  GUAUAG  aaggu a
+GA           AU      Ua     a 
+
+>cel-mir-63 (-38.00)   [cel-miR-63-5p:20-38] [cel-miR-63-3p:61-84]
+
+-ucaa    c   --   a             --    A     --c     agc 
+     caag aga  cac auuUCUAACUCGU  CGGU GUCAu   guucu   u
+     |||| |||  ||| |||||||||||||  |||| |||||   |||||    
+     guuc ucu  gug uAAAGGUUGAGCG  GUCA CAGUA   cagga   g
+aacga    a   ug   a             AA    -     Uca     aaa 
+
+>cel-mir-64 (-38.50)   [cel-miR-64-5p:22-44] [cel-miR-64-3p:68-88]
+
+-cucccc    a -  c     a    A      AG   --       -   uuuuc 
+       gcug c cu gccga UAUG CACUGA  CGU  UACCGAA ccg     c
+       |||| | || ||||| |||| ||||||  |||  ||||||| |||      
+       ugac g ga cggcu GUAC GUGACU  GCA  GUGgcuu ggu     c
+uaugaau    c c  u     C    G      -A   AC       a   ccaca 
+
+>cel-mir-65 (-43.80)   [cel-miR-65-5p:18-40] [cel-miR-65-3p:58-78]
+
+----        --uu      u    A     AA     A C   cac  u 
+    auggagcc    cgccga UAUG CACUG  GCGUA C GAA   ca a
+    ||||||||    |||||| |||| |||||  ||||| | |||   || u
+    uaccucgg    gcggcu GUAC GUGAC  CGCAU G Cuu   gu u
+aaau        uugc      C    C     -G     C U   aga  u 
+
+>cel-mir-66 (-37.49)   [cel-miR-66-5p:17-39] [cel-miR-66-3p:60-80]
+
+------     aaa       aCA        A        G    gaauguu 
+      ccaca   augccau   UGACACUG UUAGGGAU UGAu       a
+      |||||   |||||||   |||||||| |||||||| ||||        
+      ggugu   ugcggua   ACUGUGGC AAUCCUUA Acua       a
+gauguu     --a       CAA        -        A    gcccuag 
+
+>cel-mir-67 (-32.20)   [cel-miR-67-5p:20-42] [cel-miR-67-3p:61-84]
+
+gaucaaagauuc       CG   A     -CC      U     auuau 
+            gucgauc  CUC UUCUG   GGUUGU AUGcu     c
+            |||||||  ||| |||||   |||||| |||||      
+            uagcuAG  GAG AAGAU   CCAACA Uacga     a
+--uucaaaauuu       AU   A     CCU      C     auuag 
+
+>cel-mir-70 (-32.30)   [cel-miR-70-5p:25-47] [cel-miR-70-3p:62-84]
+
+ucaaaaua       ga       C         U     A  A   c  au 
+        aaacgau  aaacuau GAAAUACUA CGACG AU ACA uu  g
+        |||||||  ||||||| ||||||||| ||||| || ||| ||   
+        uuuguua  uuugaUA CUUUGUGGU GCUGC UA Ugu aa  a
+------ua       ag       C         U     A  A   a  ga 
+
+>cel-mir-71 (-36.30)   [cel-miR-71-5p:16-38] [cel-miR-71-3p:53-73]
+
+------   -  c   ga   a         U         G   u   a 
+      guc ug ucu  acg UGAAAGACA GGGUAGUGA ACG cgg g
+      ||| || |||  ||| ||||||||| ||||||||| ||| |||  
+      cag gc agg  ugc GCUUUUUGU CUUAUCACU Ugc gcu c
+aagguc   u  u   gc   C         -         A   u   c 
+
+>cel-mir-72 (-43.21)   [cel-miR-72-5p:17-39] [cel-miR-72-3p:61-82]
+
+      ---      a  uA    AG    U   AU      augaucgc 
+aggucc   cgucag gc  GGCA  AUGU GGC  AGCUGA        u
+||||||   |||||| ||  ||||  |||| |||  ||||||        a
+uccagg   guaguc cG  CCGU  UACA CCG  UCGAcu        u
+      agu      a  CA    CU    -   CU      aucaacaa 
+
+>cel-mir-73 (-35.52)   [cel-miR-73-5p:23-46] [cel-miR-73-3p:62-84]
+
+cagugagag   ---c  a            U  -     GA    CA  uauca 
+         ucc    ac cacgacUGGACU CC AUAUC  GCCA  GC     a
+         |||    || |||||||||||| || |||||  ||||  ||     c
+         agg    ug guguUGACUUGA GG UGUAG  CGGU  cg     g
+--------g   uauu  c            C  A     AA    --  uuuaa 
+
+>cel-mir-74 (-38.60)   [cel-miR-74-5p:20-42] [cel-miR-74-3p:61-82]
+
+aaa     ca        uC     U    C    UC        cauc 
+   ugguu  aaaaacgu  GGGCU CCAU UCUU  CCAGCcua    u
+   |||||  ||||||||  ||||| |||| ||||  ||||||||     
+   accaa  uuuuugcA  UCUGA GGUA AGAA  GGUcgggu    c
+-aa     -c        CA     C    A    -C        ccaa 
+
+>cel-mir-75 (-33.60)   [cel-miR-75-5p:23-44] [cel-miR-75-3p:61-82]
+
+uucuugu      -ga   a   C         CA     A    -   au 
+       ugcuuu   aga uug AGUCGGUUG  AGCUU AAUA caa  c
+       ||||||   ||| ||| |||||||||  ||||| |||| |||  c
+       acgaga   ucu aAC UCGGCCAAC  UCGAA UUau guu  g
+------g      aag   g   U         CA     A    u   aa 
+
+>cel-mir-76 (-41.30)   [cel-miR-76-5p:16-37] [cel-miR-76-3p:61-82]
+
+-a    -a         U        -      U      -  uu     u 
+  uuuc  gcuccuguc GGGCUUCA CAAUAG CGAAUA cc  aaauu c
+  ||||  ||||||||| |||||||| |||||| |||||| ||  |||||  
+  aaag  uggggguAG UCCGAAGU GUUGUU GCUUau gg  uuuaa a
+ag    ag         U        A      -      a  --     a 
+
+>cel-mir-77 (-35.40)   [cel-miR-77-5p:24-45] [cel-miR-77-3p:62-83]
+
+gcaucugc     - ---   c               CU    G     ac   c 
+        caaac c   gcc guuugGAUGGUUGUG  CUGA GAAAU  gca a
+        ||||| |   ||| |||||||||||||||  |||| |||||  ||| g
+        guuug g   ugg uaaACCUGUCGAUAC  GACU CUUua  ugu a
+--------     a aua   u               CG    A     -c   a 
+
+>cel-mir-78 (-15.00)   [cel-miR-78:61-81]
+
+aauaaaauauauug    au  ug -  -   -          -a   auuuu  a 
+              uuuc  ag  u cc gua aaauaacuag  uuu     gu a
+              ||||  ||  | || ||| ||||||||||  |||     ||  
+              agag  uu  a gg CGU UUUGUUGGUC  GAG     ca a
+--------------    cu  gu a  u   G          CG   GUuau  a 
+
+>cel-mir-79 (-36.00)   [cel-miR-79-5p:19-41] [cel-miR-79-3p:61-82]
+
+ua     -  -uu u    u          UC     CA    --uu   u 
+  guaga ca   c ccga CUUUGGUGAU  AGCUU  AUGA    ggc a
+  ||||| ||   | |||| ||||||||||  |||||  ||||    ||| c
+  caucu gu   g ggcU GAAACCAUUG  UCGAA  UAcu    uug a
+--     a  ucu c    C          GA     -A    uucu   g 
+
+>cel-mir-80 (-30.50)   [cel-miR-80-5p:19-40] [cel-miR-80-3p:61-83]
+
+auggaca   -gu   c  A         --     U  G      ----c g 
+       cuc   ucg uc GCUUUCGAC  AUGAU CU AACaau     c c
+       |||   ||| || |||||||||  ||||| || ||||||     |  
+       gag   agu AG CGAAAGUUG  UACUA GA Uuguug     g a
+--cuaua   acu   a  C         AU     -  G      uaccc a 
+
+>cel-mir-81 (-43.60)   [cel-miR-81-5p:25-46] [cel-miR-81-3p:67-88]
+
+aucagu   au    -c       uC         C       G   ---   auc 
+      gcc  cgug  ccaacag  GGUUUUCAC GUGAUCU AGA   gca   c
+      |||  ||||  |||||||  ||||||||| ||||||| |||   |||   a
+      cgg  gcau  gguuguU  UCGAAAGUG UACUAGA Ucu   cgu   a
+-guuuu   --    cu       GA         C       G   uuu   aaa 
+
+>cel-mir-82 (-35.30)   [cel-miR-82-5p:22-44] [cel-miR-82-3p:61-82]
+
+gaaaua     -uuuu      C       U U       A    a   ca 
+      gguuc     agcaac GGUUUUC C GUGAUCU CAGA uga  g
+      |||||     |||||| ||||||| | ||||||| |||| |||  c
+      ucaag     uuguUG CCGAAAG G UACUAGA GUcu gcu  u
+-----c     uauuu      A       U C       -    -   aa 
+
+>cel-mir-83 (-28.50)   [cel-miR-83-5p:17-39] [cel-miR-83-3p:61-82]
+
+   a - -  u     cc              U  A  U  -  --  caa 
+agc c c ac cggaa  ACUGAAUUUAUGUG GU CU GA cg  gc   c
+||| | | || |||||  |||||||||||||| || || || ||  ||    
+ucg g g ug gcuuu  UGACUUAAAUAUAC CA GA cu gc  cg   a
+   a a c  c     AA              -  C  U  a  ua  aga 
+
+>cel-mir-84 (-23.00)   [cel-miR-84-5p:9-32] [cel-miR-84-3p:47-69]
+
+gu    u     G    A  U        A   uguc 
+  ggca cUGAG UAGU UG AAUAUUGU GAc    u
+  |||| ||||| |||| || |||||||| |||     
+  uugu GGCUC AUCA AC UUGUAACA cug    a
+uc    C     A    -  U        C   uaau 
+
+>cel-mir-85 (-40.10)   [cel-miR-85-5p:23-45] [cel-miR-85-3p:65-88]
+
+uau       uggcg       C           -  G    A     ---   u 
+   agaauuu     ucggagc CGAUUUUUCAA UA UUUG AACca   gug a
+   |||||||     ||||||| ||||||||||| || |||| |||||   |||  
+   ucuuaag     agucuCG GCUGAAAAGUU AU AAAC Uuggu   uac c
+-au       -uaaa       U           U  G    A     aaa   a 
+
+>cel-mir-86 (-42.60)   [cel-miR-86-5p:16-38] [cel-miR-86-3p:60-81]
+
+---      -c  g   -           G  UU   A   U     a gu 
+   cguguc  ac ccg ucUAAGUGAAU CU  GCC CAG Cuucg u  u
+   ||||||  || ||| ||||||||||| ||  ||| ||| ||||| |  c
+   gcacag  ug ggc GGAUUCGCUUA GA  CGG GUC gaagu a  u
+acg      uu  a   C           -  CU   -   c     a ag 
+
+>cel-mir-87 (-44.60)   [cel-miR-87-5p:17-40] [cel-miR-87-3p:61-82]
+
+-   u   cca      -       U     C U    A   -  -   uc 
+ ggu gug   uccggc CGCCUGA ACUUU G CUCA CCU cg cug  a
+ ||| |||   |||||| ||||||| ||||| | |||| ||| || |||   
+ cca cac   aggcCG GUGGACU UGAAA C GAGU Gga gc ggu  g
+c   -   --a      U       U     - -    -   u  u   ua 
+
+>cel-mir-90 (-43.20)   [cel-miR-90-5p:16-38] [cel-miR-90-3p:62-84]
+
+g    -   u      C   U     -    G        -  a   cuc 
+ ggcg cca uucgag GGC UUCAA CGAC AUAUCAAC cg caa   a
+ |||| ||| |||||| ||| ||||| |||| |||||||| || |||   c
+ ccgu ggu aaguUC CCG AAGUU GUUG UAUAGUug gc guu   a
+a    a   u      C   U     U    -        u  -   uuc 
+
+>hsa-let-7a-1 (-35.60)   [hsa-let-7a-5p:6-27] [hsa-let-7a-3p:57-77]
+
+     U   GU                uuagggucacac 
+uggga GAG  AGUAGGUUGUAUAGUU            c
+||||| |||  ||||||||||||||||            c
+aucCU UUC  UCAUCUAACAUAUCaa            a
+     -   UG                uagagggucacc 
+
+>hsa-let-7a-2 (-25.20)   [hsa-let-7a-5p:5-26] [hsa-let-7a-2-3p:50-71]
+
+   uU   G   U             uagaa ua a 
+agg  GAG UAG AGGUUGUAUAGUU     u  c u
+|||  ||| ||| |||||||||||||     |  | c
+uCC  UUC AUC UCCGACAUGUCaa     a  g a
+   -U   G   C             --uag gg a 
+
+>hsa-let-7a-3 (-34.40)   [hsa-let-7a-5p:4-25] [hsa-let-7a-3p:52-72]
+
+   U   GU                ---------        
+ggg GAG  AGUAGGUUGUAUAGUU         uggggcu 
+||| |||  ||||||||||||||||         |||||| c
+ucC UUC  UCAUCUAACAUAUCaa         gucccgu 
+   U   UG                uaggguauc        
+
+>hsa-let-7b (-50.60)   [hsa-let-7b-5p:6-27] [hsa-let-7b-3p:60-81]
+
+     U                     ucagggcagugaug 
+cgggg GAGGUAGUAGGUUGUGUGGUU              u
+||||| |||||||||||||||||||||               
+guCCC UUCCGUCAUCCAACAUAUCaa              u
+     -                     uagaaggcuccccg 
+
+>hsa-let-7c (-33.50)   [hsa-let-7c-5p:11-32] [hsa-let-7c-3p:56-77]
+
+  a      uU   G   U             ua  g ua a 
+gc uccggg  GAG UAG AGGUUGUAUGGUU  ga u  c c
+|| ||||||  ||| ||| |||||||||||||  || |  | c
+cg agguuC  UUC AUC UCCAACAUGUCaa  uu a  g c
+  -      CU   G   U             --  g gg u 
+
+>hsa-let-7d (-42.60)   [hsa-let-7d-5p:8-29] [hsa-let-7d-3p:62-83]
+
+       A              C      uuagggcagggauu 
+ccuagga GAGGUAGUAGGUUG AUAGUU              u
+||||||| |||||||||||||| ||||||               
+ggauUCU UUCCGUCGUCCAGC UAUCaa              u
+       -              A      uggaggaacacccg 
+
+>hsa-let-7e (-37.80)   [hsa-let-7e-5p:8-29] [hsa-let-7e-3p:53-74]
+
+  c   cU   G                U  ----gga  a 
+cc ggg  GAG UAGGAGGUUGUAUAGU ga       gg c
+|| |||  ||| |||||||||||||||| ||       ||  
+gg ccC  UUC AUCCUCCGGCAUAUCa cu       cc a
+  a   CU   G                -  agaggaa  c 
+
+>hsa-let-7f-1 (-43.30)   [hsa-let-7f-5p:7-28] [hsa-let-7f-1-3p:63-84]
+
+    a UG                      ---------       u 
+ucag g  AGGUAGUAGAUUGUAUAGUUgu         gggguag g
+|||| |  ||||||||||||||||||||||         ||||||| a
+aguC C  UCCGUUAUCUAACAUAUCaaua         ucccauu u
+    - CU                      gaggacuug       u 
+
+>hsa-let-7f-2 (-40.70)   [hsa-let-7f-5p:8-29] [hsa-let-7f-2-3p:58-79]
+
+u      U   GU                uuagggucauac 
+ guggga GAG  AGUAGAUUGUAUAGUU            c
+ |||||| |||  ||||||||||||||||             
+ cacCCU UUC  UCAUCUGACAUAUCaa            c
+g      -   UG                uagagguucuac 
+
+>hsa-mir-15a (-30.74)   [hsa-miR-15a-5p:14-35] [hsa-miR-15a-3p:51-72]
+
+     gaguaaa UA        UA          ga  u 
+ccuug       g  GCAGCACA  AUGGUUUGUG  uu u
+|||||       |  ||||||||  ||||||||||  || g
+ggaac       C  CGUCGUGU  UACCGGACgu  aa a
+     auaaaaA UC        UA          gg  a 
+
+>hsa-mir-16-1 (-37.70)   [hsa-miR-16-5p:14-35] [hsa-miR-16-1-3p:56-77]
+
+      ag   c          -  A        C u   gauu 
+gucagc  ugc uUAGCAGCAC GU AAUAUUGG G uaa    c
+||||||  ||| |||||||||| || |||||||| | |||     
+caguug  aug AGUCGUCGUG CA UUAUGACC c auu    u
+      ga   a          U  A        u u   aaaa 
+
+>hsa-mir-17 (-34.30)   [hsa-miR-17-5p:14-36] [hsa-miR-17-3p:51-72]
+
+    ga       -CA        A  G     G   -  au 
+guca  auaaugu   AAGUGCUU CA UGCAG UAG ug  a
+||||  |||||||   |||||||| || ||||| ||| ||  u
+cagu  uauuacG   UUCACGGA GU ACGUC Auc ac  g
+    gg       AUG        A  G     -   u  gu 
+
+>hsa-mir-18a (-22.00)   [hsa-miR-18a-5p:6-28] [hsa-miR-18a-3p:47-69]
+
+u   cU    U   UC   U    A   -  aa u 
+ guu  AAGG GCA  UAG GCAG UAG ug  g a
+ |||  |||| |||  ||| |||| ||| ||  | g
+ cGG  UUCC CGU  AUC CGUC Auc ac  u a
+a   UC    U   GA   C    -   u  ga u 
+
+>hsa-mir-19a (-39.10)   [hsa-miR-19a-5p:14-35] [hsa-miR-19a-3p:49-71]
+
+    u  u                 --      ---    ag 
+gcag cc cuguuAGUUUUGCAUAG  UUGCAC   UACA  a
+|||| || |||||||||||||||||  ||||||   ||||  a
+cguc gg gguAGUCAAAACGUAUC  AACGUG   augu  g
+    c  u                 UA      Uug    aa 
+
+>hsa-mir-19b-1 (-38.42)   [hsa-miR-19b-1-5p:16-38] [hsa-miR-19b-3p:54-76]
+
+     uu                 -  -      UC    ugugu 
+cacug  cuaugguuAGUUUUGCA GG UUUGCA  CAGC     g
+|||||  ||||||||||||||||| || ||||||  ||||     a
+gugau  ggugucAGUCAAAACGU CC AAACGU  GUcg     u
+     --                 A  U      --    ucuua 
+
+>hsa-mir-19b-2 (-40.60)   [hsa-miR-19b-2-5p:19-40] [hsa-miR-19b-3p:62-84]
+
+      cuac                 -  -       UUCA       u 
+acauug    uuacaauuAGUUUUGCA GG UUUGCAU    gcguaua a
+||||||    ||||||||||||||||| || |||||||    |||||||  
+uguaau    aguguuAGUCAAAACGU CC AAACGUG    uguauau u
+      ----                 A  U       Ucgg       g 
+
+>hsa-mir-20a (-31.00)   [hsa-miR-20a-5p:8-30] [hsa-miR-20a-3p:44-65]
+
+    c   -A                 G   -  uu 
+guag acU  AAGUGCUUAUAGUGCAG UAG ug  u
+|||| |||  ||||||||||||||||| ||| ||   
+cguc uGA  UUCACGAGUAUUACGUC Auc au  a
+    a   AA                 -   u  ug 
+
+>hsa-mir-21 (-35.80)   [hsa-miR-21-5p:8-29] [hsa-miR-21-3p:46-66]
+
+u     gU        A     A     A    u a 
+ gucgg  AGCUUAUC GACUG UGUUG cugu g a
+ |||||  |||||||| ||||| ||||| |||| | u
+ caguc  UCGGGUAG CUGAC ACAAC ggua c c
+a     UG        -     C     -    - u 
+
+>hsa-mir-22 (-39.80)   [hsa-miR-22-5p:15-36] [hsa-miR-22-3p:53-74]
+
+   u   cc               -     A      u  ccu 
+ggc gag  gcaguAGUUCUUCAG UGGCA GCUUUA gu   g
+||| |||  ||||||||||||||| ||||| |||||| ||   a
+ccg cuc  cguUGUCAAGAAGUU ACCGU CGAAau cg   c
+   u   -c               G     -      -  acc 
+
+>hsa-mir-23a (-33.20)   [hsa-miR-23a-5p:9-30] [hsa-miR-23a-3p:45-65]
+
+  c   c     -       G    G      cuuc 
+gg cgg uGGGG UUCCUGG GAUG GAUUUg    c
+|| ||| ||||| ||||||| |||| ||||||     
+cc gcc aCCUU AGGGACC UUAC CUAaac    u
+  a   a     U       G    A      acug 
+
+>hsa-mir-24-1 (-26.32)   [hsa-miR-24-1-5p:7-28] [hsa-miR-24-3p:44-65]
+
+    g  G   A         UA     ucuca 
+cucc gU CCU CUGAGCUGA  UCAGU     u
+|||| || ||| |||||||||  |||||     u
+gagG CA GGA GACUUGACU  GGUca     u
+    A  A   C         -C     cacau 
+
+>hsa-mir-24-2 (-27.30)   [hsa-miR-24-2-5p:13-34] [hsa-miR-24-3p:50-71]
+
+     cc   cg   -CU         --AA      u 
+cucug  ucc  UGC   ACUGAGCUG    ACACAG u
+|||||  |||  |||   |||||||||    |||||| g
+ggGAC  AGG  ACG   UGACUCGGU    uguguu g
+     -A   --   ACU         caca      u 
+
+>hsa-mir-25 (-37.80)   [hsa-miR-25-5p:14-34] [hsa-miR-25-3p:52-73]
+
+    a ug   ag    G     UU G     U   --  ac 
+ggcc g  uug  AGGC GAGAC  G GCAAU Gcu  gg  g
+|||| |  |||  |||| |||||  | ||||| |||  ||  c
+ccgg c  gac  UCUG CUCUG  C CGUUA Cgg  cc  u
+    c gu   AG    G     UU A     -   gu  cg 
+
+>hsa-mir-26a-1 (-37.30)   [hsa-miR-26a-5p:10-31] [hsa-miR-26a-1-3p:49-70]
+
+   g      U         C          --g  ca 
+gug ccucgU CAAGUAAUC AGGAUAGGCU   ug  g
+||| |||||| ||||||||| ||||||||||   ||  g
+cgc gggGCA GUUCAUUGG UCUUAUCCgg   ac  u
+   a      C         U          gua  cc 
+
+>hsa-mir-26b (-40.10)   [hsa-miR-26b-5p:12-32] [hsa-miR-26b-3p:47-68]
+
+    ga   -   U        UC           u ug 
+ccgg  ccc agU CAAGUAAU  AGGAUAGGUug g  c
+||||  ||| ||| ||||||||  ||||||||||| |   
+ggcc  ggg UCG GUUCAUUA  UCUUGUCCgac c  u
+    ag   C   -        CC           - ug 
+
+>hsa-mir-27a (-37.50)   [hsa-miR-27a-5p:10-31] [hsa-miR-27a-3p:51-71]
+
+   a  a  A         UG  U       g  u cac 
+cug gg gc GGGCUUAGC  CU GUGAGCA gg c   a
+||| || || |||||||||  || ||||||| || |    
+gac cc CG CUUGAAUCG  GA CACUUgu cu g   c
+   c  c  C         GU  -       g  - aac 
+
+>hsa-mir-28 (-50.60)   [hsa-miR-28-5p:14-35] [hsa-miR-28-3p:54-75]
+
+   c         A                U  ----     cc 
+ggu cuugcccuc AGGAGCUCACAGUCUA UG    AGuua  u
+||| ||||||||| |||||||||||||||| ||    |||||   
+uca ggacgggAG UCCUCGAGUGUUAGAU AC    ucagu  u
+   c         G                C  ccuu     cu 
+
+>hsa-mir-29a (-24.90)   [hsa-miR-29a-5p:4-25] [hsa-miR-29a-3p:42-63]
+
+            UUU       C    ucaa 
+augACUGAUUUC   UGGUGUU AGag    u
+||||||||||||   ||||||| ||||    a
+uAUUGGCUAAAG   ACCACGA Ucuu    u
+            UCU       -    uuaa 
+
+>hsa-mir-30a (-37.30)   [hsa-miR-30a-5p:6-27] [hsa-miR-30a-3p:47-68]
+
+   a            UC           -----   a 
+gcg cUGUAAACAUCC  GACUGGAAGcu     gug a
+||| ||||||||||||  |||||||||||     |||  
+cgu GACGUUUGUAGG  CUGACUUUCgg     cac g
+   C            --           guaga   c 
+
+>hsa-mir-31 (-36.00)   [hsa-miR-31-5p:8-28] [hsa-miR-31-3p:44-65]
+
+      gA     G   C         -U   gaa 
+ggagag  GGCAA AUG UGGCAUAGC  guu   c
+||||||  ||||| ||| |||||||||  |||    
+ccuuuc  CCGUU UAC ACCGUAUCG  caa   u
+      UA     A   A         Uc   ggg 
+
+>hsa-mir-32 (-31.90)   [hsa-miR-32-5p:6-27] [hsa-miR-32-3p:47-68]
+
+        UG     U            - uu  c 
+ggagaUAU  CACAU ACUAAGUUGCAu g  gu a
+||||||||  ||||| |||||||||||| |  ||  
+cuUUUAUA  GUGUG UGAUUUAACgua c  cg c
+        GU     -            a uc  g 
+
+>hsa-mir-33a (-37.30)   [hsa-miR-33a-5p:6-26] [hsa-miR-33a-3p:46-67]
+
+              A UU          uucu  u 
+cugugGUGCAUUGU G  GCAUUGCAug    gg g
+|||||||||||||| |  ||||||||||    || g
+gaCACUACGUGACA C  UGUAACguac    cc u
+              C UU          ----  a 
+
+>hsa-mir-92a-1 (-36.20)   [hsa-miR-92a-1-5p:11-33] [hsa-miR-92a-3p:48-69]
+
+---cu   uac            C   U           uu 
+     uuc   acAGGUUGGGAU GGU GCAAUGCUgug  u
+     |||   |||||||||||| ||| |||||||||||   
+     gag   UGUCCGGCCCUG UCA CGUUAUgguau  c
+gguuu   --u            U   -           gu 
+
+>hsa-mir-92a-2 (-30.20)   [hsa-miR-92a-2-5p:9-30] [hsa-miR-92a-3p:48-69]
+
+  a   c     G     UU  U   U     -      
+uc ucc uGGGU GGGAU  GU GCA UACuu guguu 
+|| ||| ||||| |||||  || ||| ||||| |||| c
+ag agg GUCCG CCCUG  CA CGU AUgaa uauau 
+  a   U     G     UU  -   U     a      
+
+>hsa-mir-93 (-44.80)   [hsa-miR-93-5p:11-33] [hsa-miR-93-3p:50-71]
+
+          -CA       -     U    G   ug  au 
+cugggggcuc   AAGUGCU GUUCG GCAG UAG  ug  u
+||||||||||   ||||||| ||||| |||| |||  ||   
+ggcccccgaG   UUCACGA CGAGU CGUC Auc  ac  a
+          CCC       U     -    -   ca  cc 
+
+>hsa-mir-95 (-37.50)   [hsa-miR-95-5p:15-35] [hsa-miR-95-3p:49-70]
+
+a   c      ca          GU         -   aa 
+ aca aguggg  cUCAAUAAAU  CUGUUGAAU Uga  u
+ ||| ||||||  ||||||||||  ||||||||| |||   
+ ugu ucaccc  GAGUUAUUUA  GGCAACUUa auu  g
+g   c      AC          UG         c   gc 
+
+>hsa-mir-96 (-34.40)   [hsa-miR-96-5p:9-31] [hsa-miR-96-3p:52-73]
+
+ugg  g  U        A      UU      ---   uc 
+   cc au UUGGCACU GCACAU  UUGCUu   gug  u
+   || || |||||||| ||||||  ||||||   |||   
+   gg UA AACCGUGA CGUGUA  AAcgag   cgc  c
+aaa  G  U        -      CU      ucu   cu 
+
+>hsa-mir-98 (-57.00)   [hsa-miR-98-5p:22-43] [hsa-miR-98-3p:80-101]
+
+a    uc    -          U                 U    ---------      aggg 
+ ggau  ugcu caugccaggg GAGGUAGUAAGUUGUAU GUUg         uggggu    a
+ ||||  |||| |||||||||| ||||||||||||||||| ||||         ||||||    u
+ cuua  acgg gugugguCCC UUUCAUCAUUCAACAUA Caau         accccg    a
+a    -u    u          -                 U    agaagauua      gauu 
+
+>hsa-mir-99a (-39.60)   [hsa-miR-99a-5p:13-34] [hsa-miR-99a-3p:50-71]
+
+cc          A         UC   U      g  aag 
+  cauuggcaua ACCCGUAGA  CGA CUUGUG ug   u
+  |||||||||| |||||||||  ||| |||||| ||    
+  gugacuguGU UGGGUAUCU  GCU GAACac gc   g
+gu          C         UC   C      -  cag 
+
+>hsa-mir-100 (-26.80)   [hsa-miR-100-5p:13-34] [hsa-miR-100-3p:48-69]
+
+    -uu c    A   CG     C   A      - uau 
+ccug   g caca ACC  UAGAU CGA CUUGUG g   u
+||||   | |||| |||  ||||| ||| |||||| |    
+ggau   c guGU UGG  AUCUA GUU GAACac c   a
+    ugu u    A   AU     U   C      g cug 
+
+>hsa-mir-101-1 (-36.20)   [hsa-miR-101-5p:11-32] [hsa-miR-101-3p:47-67]
+
+u   cuggc                  A    gucua 
+ gcc     uCAGUUAUCACAGUGCUG UGCU     u
+ |||     |||||||||||||||||| ||||      
+ cgg     AGUCAAUAGUGUCAUGAC AUgg     u
+a   uaggA                  -    aaauc 
+
+>hsa-mir-29b-1 (-34.02)   [hsa-miR-29b-1-5p:10-33] [hsa-miR-29b-3p:51-73]
+
+-         -          U      GU      uuaaa 
+ cuucaggaa GCUGGUUUCA AUGGUG  UUAGAu     u
+ ||||||||| |||||||||| ||||||  ||||||     a
+ gggguucUU UGACUAAAGU UACCAC  GAUcug     g
+g         G          U      --      uuagu 
+
+>hsa-mir-29b-2 (-31.24)   [hsa-miR-29b-2-5p:11-32] [hsa-miR-29b-3p:52-74]
+
+         -          C      G  U    uuuucc 
+cuucuggaa gCUGGUUUCA AUGGUG CU AGau      a
+||||||||| |||||||||| |||||| || ||||       
+gaggauuUU UGACUAAAGU UACCAC GA Ucua      u
+         G          U      -  -    uguuuc 
+

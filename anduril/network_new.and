@@ -1,0 +1,71 @@
+/* ************************
+* NAME: network_new.and
+* AUTHOR: Christina Herrmann
+* DATE: 20. AUG 2013
+* DESCRIPTION:
+* The network.and file will import the input.csv file, 
+* extract for each row separately all column values 
+* and start the pipeline for each input file (= row of input.csv file) according to filetype
+* As soon as processing of a file has converted it into a FASTQ file, network.and calls the ProcessFASTQ_part_1 function,
+* as downstream processing has to be the same for all files within one analysis/experiment.
+************************* */
+
+include "processFASTQ_part_1.and"
+include "processFASTQ_part_2.and"
+
+/* ************************
+* Specify input file: csv file including header, containing paths and parameters of all input files;
+* FORMAT OF in.csv:
+* filepath	species	type	strand	paired	barcodes	orient	adpt_5	adpt_3
+* path1/file1.sra	human	SRA	YES	NO	N/A	N/A	GTGCC	N/A
+* path2/file2.fastq	mouse	FASTQ	NO	NO	AAA|CTC	3'	N/A	N/A
+************************* */
+
+incsv = INPUT(path="/import/bc2/home/zavolan/cherrmann/PIPELINE/TEST_INPUT/test.csv")
+
+/* *************************
+* A. ITERATE OVER ROWS OF CSV FILE (= ALL INPUT FILES)
+************************* */
+i = 0
+
+for row: std.itercsv(incsv.in) {
+
+        i = i+1
+
+    // import file specified in current row of csv file, set name (has to be different in each iteration of the loop)
+        infile = INPUT(path=row.filepath, @name="infile_"+i)
+        
+	// find current file with new name
+        infile_i = std.lookup("infile_"+i)
+        
+    // Get values from all columns of csv file for current row
+        SPECIES = row.species
+        TYPE = row.type
+        STRAND = row.strand
+        PAIRED = row.paired
+        BARCODE = row.barcodes
+        ORIENT = row.orient
+        ADPT_5 = row.adpt_5
+        ADPT_3 = row.adpt_3
+        SAMPLE = i
+
+    // Check format of current file and initiate appropriate pipeline section
+
+        if TYPE == "SRA" {
+        
+          // Call component fastq_dump; input: SRA infile
+            fastqd = fastq_dump(infile = infile_i.in, fastq_dump_dir="/import/bc2/home/zavolan/kanitz/soft/bin/fastq-dump", @host="long_hm", @name="fastqd_"+i)
+            fastqd_i = std.lookup("fastqd_"+i)
+            OUTPUT(fastqd_i.outfolder)
+        
+          // Call function ProcessFASTQ_1
+            proc = ProcessFASTQ_1(fastqd_i.outfolder, infile=null, Sample=SAMPLE, Species=SPECIES, Strand=STRAND, Paired=PAIRED, Barcode=BARCODE, Orient=ORIENT, Adpt_5=ADPT_5, Adpt_3=ADPT_3, @name="Fastq_"+i, @bind=fastqd_i )
+        }
+
+        if TYPE == "FASTQ" {
+            // Call function ProcessFASTQ_1
+            proc = ProcessFASTQ_1(infolder=null, infile=infile_i.in, Sample=SAMPLE, Species=SPECIES, Strand=STRAND, Paired=PAIRED, Barcode=BARCODE, Orient=ORIENT, Adpt_5=ADPT_5, Adpt_3=ADPT_3, @name="Fastq_"+i)
+        }
+        
+        // !!!!!! INCLUDE IF TYPE==FASTQ.GZ
+}

@@ -1,0 +1,64 @@
+//main function
+
+include "processFASTQ.and"
+
+// Specify input file: csv file including header, containing all input files; Format: filepath\tfiletype
+
+incsv = INPUT(path="/import/bc2/home/zavolan/cherrmann/PIPELINE/TEST_INPUT/test_fastq.csv")
+
+//filepath format	barcodes
+//path1    SRA		N/A
+
+
+// iterate over rows of csv file (= all input files)
+i = 0
+
+for row: std.itercsv(incsv.in) {
+
+        i = i+1
+
+        // import file specified in current row of csv file, set name (has to be different in each iteration of the loop)
+        infile = INPUT(path=row.filepath, @name="infile_"+i)
+
+        // find current file with new name
+        infile_i = std.lookup("infile_"+i)
+
+        // Check format of current file and initiate appropriate pipeline section
+
+        if row.format == "SRA" {
+        
+            // Call component fastq_dump; input: SRA infile
+            fastqd = fastq_dump(infile = infile_i.in, fastq_dump_dir="/import/bc2/home/zavolan/kanitz/soft/bin/fastq-dump", @host="long_hm", @name="fastqd_"+i)
+            fastqd_i = std.lookup("fastqd_"+i)
+            OUTPUT(fastqd_i.outfolder)
+        
+            // Call function ProcessFASTQ
+            proc = ProcessFASTQ(fastqd_i.outfolder, infile=null, @name="processFASTQ_"+i, @bind=fastqd_i )
+        }
+
+        if row.format == "FASTQ" {
+            // Check for presence of barcodes
+            if row.barcodes != "N/A" {
+		BARCODE=row.barcodes
+		// Call component barcode_split
+		bar = barcode_split(infile = infile_i.in, barcodes = BARCODE, @host="long", @name="bar_"+i)
+		bar_i = std.lookup("bar_"+i)
+		OUTPUT(bar_i.outfolder)
+
+		j = i*100
+		for file: std.iterdir(bar_i.outfolder, includeDir=false, @bind=bar_i) {
+			j = j + 10 
+			no_bar = INPUT(path=file.path, @name="no_bar_"+j)
+			no_bar_j = std.lookup("no_bar_"+j)
+			//proc = ProcessFASTQ(infile=no_bar_j.in, @name="processFASTQ_"+j) 
+		}
+	    }
+	    else {
+            	proc = ProcessFASTQ(infolder=null, infile=infile_i.in, @name="processFASTQ_"+i)
+            }
+	}
+
+}
+
+
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<component>
+    <name>remove_multi__mappers</name>
+    <!--<version>1.0</version>-->
+    <doc>
+    removes multimappers from sam file using remove_multi_mappers.pl by Alexander Kanitz\n
+    Output: sam file with unique mappers and .txt file with names of multimappers that have been removed from the sam file
+    </doc>
+    <launcher type="python">
+        <argument name="file" value="remove_multi_mappers.py" />
+    </launcher>
+    <requires>URL="http://www.python.org/not" type="manual">python</requires>
+    <inputs>
+        <input name="infolder" type="BinaryFolder" optional= "true" >
+            <doc>sam file in folder, Anduril output from component: segemehl</doc>
+        </input>
+	<input name="infile" type="BinaryFile" optional = "true" >
+            <doc>sam file, user input</doc>
+        </input>
+    </inputs>
+    <outputs>
+        <output name="unique_mappers" type="BinaryFolder">
+            <doc>sam file containing only unique mappers</doc>
+        </output>
+        <output name="duplicates" type="BinaryFolder">
+            <doc>text file with names of multimappers that have been removed from original sam file</doc>
+        </output>
+    </outputs>
+</component>

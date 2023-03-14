@@ -1,0 +1,3 @@
+<parameter name="${parameter_name}" type="string" default="${default}">
+	<doc> ${parameter_description}</doc>
+</parameter>

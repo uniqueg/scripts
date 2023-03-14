@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<component>
+    <name>segemehl</name>
+    <version>1.0</version>
+    <doc>
+    Mapping of fastq files to appropriate genome/transcriptome with segemehl (http://www.bioinf.uni-leipzig.de/Software/segemehl/)
+    </doc>
+    <launcher type="python">
+        <argument name="file" value="segemehl.py" />
+    </launcher>
+    <requires>URL="http://www.python.org/not" type="manual">python</requires>
+    <inputs>
+        <input name="infile" type="BinaryFile" optional="true">
+            <doc>fastq file, user input</doc>
+        </input>
+        <input name="infolder" type="BinaryFolder" optional="true">
+            <doc>fastq file in its own folder, output from previous anduril component</doc>
+        </input>
+    </inputs>
+    <outputs>
+        <output name="outfolder" type="BinaryFolder">
+            <doc> sam file in its own folder</doc>
+        </output>
+        <output name="unmatched_folder" type="BinaryFolder">
+            <doc> unmatched reads file in its own folder</doc>
+        </output>
+    </outputs>
+    <parameters>
+    	<parameter name="segemehl" type="string" default="/import/bc2/home/zavolan/kanitz/soft/bin/segemehl.x">
+			<doc> path to segemehl</doc>
+		</parameter>
+    	<parameter name="index" type="string" default="/import/bc2/home/zavolan/kanitz/resources/annotations/genomes/human/hg19/compiled/hg19_segemehl_index.idx">
+			<doc> path to index file for appropriate genome</doc>
+		</parameter>
+		<parameter name="genome" type="string" default="/import/bc2/home/zavolan/kanitz/resources/annotations/genomes/human/hg19/compiled/hg19.fa">
+			<doc> path to genome file</doc>
+		</parameter>
+		<parameter name="threads" type="int" default="13">
+            <doc> number of threads to be used for computation</doc>
+        </parameter>
+        <parameter name="differences" type="int" default="1">
+            <doc> allowed mismatches in seed</doc>
+        </parameter>
+        <parameter name="accuracy" type="int" default="90">
+			<doc> minimun required alignment accuracy</doc>
+		</parameter>
+		<parameter name="clipacc" type="int" default="100">
+			<doc> clipping accuracy</doc>
+		</parameter>
+		<parameter name="prime3" type="string" default="">
+			<doc> sequence of 3 prime adapter</doc>
+		</parameter>
+		<parameter name="prime5" type="string" default="">
+			<doc> sequence of 5 prime adapter</doc>
+		</parameter>
+    </parameters>
+</component>

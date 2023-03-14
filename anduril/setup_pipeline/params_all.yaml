@@ -1,0 +1,20 @@
+CSVFILE:  
+OUTPUT: /import/bc2/home/zavolan/cherrmann/PIPELINE/TEST_OUTPUT
+FASTQ_DUMP_DIR: /import/bc2/home/zavolan/kanitz/soft/bin/fastq-dump
+FASTQ_DUMP_MIN_READ_LEN: 1
+BARCODE_MISMATCHES:  
+SEGEMEHL_DIR: /import/bc2/home/zavolan/kanitz/soft/bin/segemehl.x
+SEGEMEHL_INDEX: /import/bc2/home/zavolan/kanitz/resources/annotations/genomes/human/hg19/compiled/hg19_segemehl_index.idx
+SEGEMEHL_GEN: /import/bc2/home/zavolan/kanitz/resources/annotations/genomes/human/hg19/compiled/hg19.fa
+SEGEMEHL_TRX:
+SEGEMEHL_THREADS: 13
+SEGEMEHL_DIFFERENCES: 1
+SEGEMEHL_ACCURACY: 90
+SEGEMEHL_CLIPACC: 100
+SAMTOOLS_DIR: /import/bc2/soft/bin/samtools
+SUMM_OVERLAPS_GTF: /import/bc2/home/zavolan/kanitz/resources/annotations/transcriptomes/human/gencode.v17.patches/gencode.v17.patches.pseudoexons.gtf
+SUMM_OVERLAPS_INDEX: FALSE
+SUMM_OVERLAPS_GENOME: NA
+SUMM_OVERLAPS_MODE: IntersectionStrict
+SUMM_OVERLAPS_IGN_STRAND: FALSE
+

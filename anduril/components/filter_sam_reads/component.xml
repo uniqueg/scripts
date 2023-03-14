@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<component>
+    <name>filter_sam_reads</name>
+    <!--<version>1.0</version>-->
+    <doc>
+    removes multi-genome mappers from mapped and sorted transcript file
+    </doc>
+    <launcher type="python">
+        <argument name="file" value="filter_sam_reads.py" />
+    </launcher>
+    <requires>URL="http://www.python.org/not" type="manual">python</requires>
+    <inputs>
+	<input name="duplicates" type="BinaryFolder">
+            <doc>file with reads to be removed, output from previous component: remove_multi_mappers</doc>
+        </input>
+        <input name="infile" type="BinaryFile" optional="true">
+            <doc>sorted sam file</doc>
+        </input>
+        <input name="infolder" type="BinaryFolder" optional="true">
+            <doc>sorted sam file in folder, output from previous component: sort_sam</doc>
+        </input>
+    </inputs>
+    <outputs>
+        <output name="outfolder" type="BinaryFolder">
+            <doc>sorted sam file with reads that map only to one gene (but can be different transcripts)</doc>
+        </output>
+    </outputs>
+    <parameters>
+        <parameter name="jar_dir" type="string" default="/import/bc2/soft/bin/java">
+            <doc> path to java directory</doc>
+        </parameter>
+        <parameter name="picard_dir" type="string" default="/import/bc2/home/zavolan/kanitz/soft/picard-tools-1.93">
+	    <doc> path to picard tools directory</doc>	
+	</parameter>
+	<parameter name="filter" type="string" default="excludeReadList">
+	    <doc> desired filtering, default excludeReadList, here list with duplicates has to be provided in inputs</doc>
+	</parameter>
+	<parameter name="validation_stringency" type="string" default="STRICT">
+            <doc> possible values: STRICT, SILENT, LENIENT</doc>
+        </parameter>
+    </parameters>
+</component>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<component>
+    <name>${name}</name>
+    <!--<version>1.0</version>-->
+    <doc>
+    ${component_description}
+    </doc>
+    <launcher type="python">
+        <argument name="file" value=${name_of_python_wrapper_script_dot_py} />
+    </launcher>
+    <requires>URL="http://www.python.org/not" type="manual">python</requires>
+    <inputs>
+        <input name="${infile}" type="BinaryFile" optional="true">
+            <doc>${input_file_description}</doc>
+        </input>
+        <input name="${infolder}" type="BinaryFolder" optional="true">
+            <doc>${input_folder_description}</doc>
+        </input>
+    </inputs>
+    <outputs>
+        <output name="${outfolder}" type="BinaryFolder">
+            <doc>${outfolder_description}</doc>
+        </output>
+    </outputs>
+    <parameters>
+        <parameter name="${parameter_name}" type="string" default="${default}">
+            <doc> ${parameter_description}</doc>
+        </parameter>
+    </parameters>
+</component>

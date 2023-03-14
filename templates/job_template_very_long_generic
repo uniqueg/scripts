@@ -1,0 +1,30 @@
+#!/bin/bash
+#$ -S /bin/bash
+#$ -P project_zavolan
+#$ -q fs_very_long
+#$ -j y
+#$ -cwd
+#$ -o ######
+
+## GENERAL INFO
+# Author: Alexander Kanitz
+# Created: #####
+# Modified: #####
+# Adapted from: #####
+
+## STATUS MESSAGE
+echo "JOB STARTED."
+
+## VARIABLES
+# Path to script file
+s_dir='#####'
+# Path to input files
+i_dir='#####'
+# Path to output file
+o_dir='#####'
+
+## COMMANDS
+time ##### $s_dir/##### $i_dir/##### $o_dir/#####
+
+## STATUS MESSAGE
+echo "JOB COMPLETED."

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<component>
+    <name>isoform_expression</name>
+    <!--<version>1.0</version>-->
+    <doc>
+    
+    </doc>
+    <launcher type="python">
+        <argument name="file" value="isoform_expression.py" />
+    </launcher>
+    <requires>URL="http://www.python.org/not" type="manual">python</requires>
+    <inputs>
+        <input name="infolder" type="BinaryFolder" optional= "true" >
+            <doc>sam file in folder, Anduril output from component: index_bam</doc>
+        </input>
+	<input name="infile" type="BinaryFile" optional = "true" >
+            <doc>sam file, user input</doc>
+        </input>
+    </inputs>
+    <outputs>
+        <output name="outfolder" type="BinaryFolder">
+            <doc></doc>
+        </output>
+    </outputs>
+    <parameters>
+    	<parameter name="prog" type="string" default="/import/bc2/home/zavolan/kanitz/soft/bin/rna">
+	    <doc> path to program</doc>
+	</parameter>
+    	<parameter name="gene_trx_tab" type="string" default="/import/bc2/home/zavolan/kanitz/resources/annotations/transcriptomes/human/gencode.v17.patches/gencode.v17.patches.gene_trx_lookup_table.tab">
+	    <doc> gene transcript lookup table</doc>
+	</parameter>
+	<parameter name="likelihood_fct" type="string" default="/import/bc2/home/zavolan/kanitz/PIPELINE/test/segemehl_trx/e">
+    	    <doc> This likelihood cluster the reads according to which transcript they map to. We coded this information in a long long unsigned int, thus you can't have more than 16 transcripts for each gene. If you really want to use gene with more than 16 transcript, you can use the likelihood function for paired-end with no information on the insert size.  Just add "-e"  following by a .txt file with one zero inside.</doc>
+	</parameter>
+	<parameter name="var" type="int" default= "10000">
+	    <doc> But the sampling with large number of transcript is  not very significant. You should try to reduce the number of transcript to ~15 or  modifiy the variance of the proposal distribution with the "-s" option. The initial value is 1000, try to increase to 10'000 for large number of transcripts.</doc>
+	</parameter>
+    </parameters>
+</component>
+

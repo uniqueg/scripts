@@ -1,0 +1,7 @@
+INPUT_FILES_DIR: ./TEST_INPUT
+INPUT_FILES:
+OUTPUT: /import/bc2/home/zavolan/cherrmann/PIPELINE/TEST_OUTPUT
+CSVFILE:  
+SEGEMEHL_DIR: 
+SEGEMEHL_ACCURACY:
+FASTQ_DUMP_DIR: /import/bc2/home/zavolan/kanitz/soft/bin/fastq-dump

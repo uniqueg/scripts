@@ -1,0 +1,76 @@
+/* *******************
+*   TO DO
+* !!!!!!! FIND SOME UBIQUITOUS RETURN FILE, ELSE THE WHOLE FUNCTION WILL NOT WORK!!!!!!!!!
+********************** */
+
+
+
+/* ************************
+* NAME: processFASTQ_part_1.and
+* AUTHOR: Christina Herrmann
+* DATE: 20. AUG 2013
+* DESCRIPTION:
+* This function is called by the network.and file after an input file from the csv file has been converted to a FASTQ file
+* ProcessFASTQ_1 includes the component barcode_split and will call ProcessFASTQ_2
+* either for every output file of the component barcode_split, or directly if no barcodes are given
+************************* */
+
+include "processFASTQ_part_2.and"
+
+function ProcessFASTQ_1(optional BinaryFolder infolder, optional BinaryFile infile, int Sample, string Species, string Strand, string Paired, string Barcode, string Orient, string Adpt_5, string Adpt_3) -> (BinaryFile part_1)
+{
+	i = Sample
+	std.echo("Part 1: Processing sample number", i, sep=" ")
+	
+/* *************************
+* A. BARCODE_SPLIT
+* DESCRIPTION:
+* Split reads from one FASTQ file according to their barcodes
+************************* */	
+
+	// Check for presence of barcodes
+    if Barcode != "N/A" {
+		
+		// Call component barcode_split
+		// Unmatched reads are stored in extra folder within outfolder. That folder is not specified as outport
+		// because the unmatched reads will not be considered in the subsequent analysis
+		
+		bar = barcode_split(infolder = infolder, infile = infile, barcodes = Barcode, mismatches = "", eol = Orient, @host="long")
+		OUTPUT(bar.outfolder)
+		
+		
+/* *************************
+* B. CALL 2nd PART OF PIPELINE: FUNCTION ProcessFASTQ_2
+* DESCRIPTION:
+* For each file in the barcode_split outfolder, or for each file which didn't have barcodes,
+* initiate 2nd part of pipeline, which includes segemehl, sam to bam, summarize overlaps
+************************* */	
+		
+	// Call ProcessFASTQ_2 on all files in outfolder of barcode_split
+	// Unmatched reads are not considered for further analysis, if they should be, set includeDir=true
+		j = i*100
+		for file: std.iterdir(bar.outfolder, includeDir=false, @bind=bar) {
+			j = j + 10 
+			no_bar = INPUT(path=file.path, @name="no_bar_"+j)
+			no_bar_j = std.lookup("no_bar_"+j)
+			
+			proc = ProcessFASTQ_2(infolder=null, infile=no_bar_j.in, Sample2=j, Species=Species, Strand=Strand, Paired=Paired, Adpt_5=Adpt_5, Adpt_3=Adpt_3, @name="BarcodeSplit_"+j)
+		}
+	 }
+	 
+	// If no barcodes were given, call 2nd part directly
+	else {
+			
+            proc = ProcessFASTQ_2(infolder=infolder, infile=infile, Sample2=i, Species=Species, Strand=Strand, Paired=Paired, Adpt_5=Adpt_5, Adpt_3=Adpt_3, @name="BarcodeNoSplit_"+i)
+    }
+
+	
+/* *************************
+* C. RETURN
+* DESCRIPTION:
+* Return for function processFASTQ_1
+* !!!!!!! FIND SOME UBIQUITOUS RETURN FILE, ELSE THE WHOLE FUNCTION WILL NOT WORK!!!!!!!!!
+************************* */
+     return record(part_1 = infile)
+}
+

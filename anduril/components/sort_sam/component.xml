@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<component>
+    <name>sort_sam</name>
+    <!--<version>1.0</version>-->
+    <doc>
+    sort sam file by queryname
+    </doc>
+    <launcher type="python">
+        <argument name="file" value="sort_sam.py" />
+    </launcher>
+    <requires>URL="http://www.python.org/not" type="manual">python</requires>
+    <inputs>
+        <input name="infile" type="BinaryFile" optional="true">
+            <doc>unsorted sam file</doc>
+        </input>
+        <input name="infolder" type="BinaryFolder" optional="true">
+            <doc>unsorted sam file in folder, output from previous component</doc>
+        </input>
+    </inputs>
+    <outputs>
+        <output name="outfolder" type="BinaryFolder">
+            <doc>sorted sam file</doc>
+        </output>
+    </outputs>
+    <parameters>
+        <parameter name="jar_dir" type="string" default="/import/bc2/soft/bin/java">
+            <doc> path to java directory</doc>
+        </parameter>
+        <parameter name="picard_dir" type="string" default="/import/bc2/home/zavolan/kanitz/soft/picard-tools-1.93">
+	    <doc> path to picard tools directory</doc>	
+	</parameter>
+	<parameter name="sort_order" type="string" default="queryname">
+	    <doc> desired sort order</doc>
+	</parameter>
+	<parameter name="validation_stringency" type="string" default="STRICT">
+            <doc> validation_stringency for sam files read by the program</doc>
+        </parameter>
+    </parameters>
+</component>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<component>
+    <name>summarize_overlaps</name>
+    <!--<version>1.0</version>-->
+    <doc>
+    Calculates overlaps of reads in BAM files with regions specified in a GTF file using GenomicRanges::summarizeOverlaps.
+    Each read is counted at most once.
+    </doc>
+    <launcher type="python">
+        <argument name="file" value="summarize_overlaps.py" />
+    </launcher>
+    <requires>URL="http://www.python.org/not" type="manual">python</requires>
+    <inputs>
+        <input name="infile" type="BinaryFile" optional="true">
+            <doc>sorted indexed bam file</doc>
+        </input>
+        <input name="infolder" type="BinaryFolder" optional="true">
+            <doc>sorted indexed bam file in folder, output from previous component</doc>
+        </input>
+    </inputs>
+    <outputs>
+        <output name="outfolder" type="BinaryFolder">
+            <doc>Output: Count table of format: Feature name/ID TAB count</doc>
+        </output>
+    </outputs>
+    <parameters>
+    	<parameter name="gtf" type="string" default="/import/bc2/home/zavolan/kanitz/resources/annotations/transcriptomes/human/gencode.v17.patches/gencode.v17.patches.pseudoexons.gtf">
+            <doc> feature file name</doc>
+        </parameter>
+        <parameter name="index" type="string" default="FALSE">
+            <doc> index file for bam file in different folder</doc>
+        </parameter>
+        <parameter name="genome" type="string" default="NA">
+	    <doc> Reference genome identifier (e.g. 'hg19', 'mm10'...); may be unstable if input file contains sequence names that are not available in the indicated genome, therefore leave as/set to NA if problems occur</doc>
+	</parameter>
+	<parameter name="mode" type="string" default="IntersectionStrict">
+	    <doc> Mode of assigning reads to overlapping features or other ambiguities; 
+				allowed values: 'Union', 'IntersectionStrict', 'IntersectionNotEmpty'</doc>
+	</parameter>
+	<parameter name="ignore_strand" type="string" default="FALSE">
+	    <doc> Ignore strand information</doc>
+	</parameter>
+    </parameters>
+</component>

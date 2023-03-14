@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<component>
+    <name>fastq_dump</name>
+    <!--<version>1.0</version>-->
+    <doc>
+    NCBI SRAtoolkit fastq-dump; converts sra to fastq; default settings used
+    </doc>
+    <launcher type="python">
+        <argument name="file" value="fastq_dump.py" />
+    </launcher>
+    <requires>URL="http://www.python.org/not" type="manual">python</requires>
+    <inputs>
+        <input name="infile" type="BinaryFile" optional="true">
+            <doc>sra file</doc>
+        </input>
+        <input name="infolder" type="BinaryFolder" optional="true">
+            <doc>sra file in its own folder, if output from previous anduril component</doc>
+        </input>
+    </inputs>
+    <outputs>
+        <output name="outfolder" type="BinaryFolder">
+            <doc>fastq file in its own folder</doc>
+        </output>
+    </outputs>
+    <parameters>
+        <parameter name="fastq_dump_dir" type="string" default="/import/bc2/home/zavolan/kanitz/soft/bin/fastq-dump">
+            <doc> path to fastq_dump</doc>
+        </parameter>
+        <parameter name="minReadLen" type="int" default="1">
+	    <doc> minimum length for reads to be considered </doc>
+	</parameter>
+    </parameters>
+</component>

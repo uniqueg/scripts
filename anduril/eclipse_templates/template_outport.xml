@@ -1,0 +1,3 @@
+<output name="${outfolder}" type="${BinaryFolder}">
+	<doc>${outfolder_description}</doc>
+</output>

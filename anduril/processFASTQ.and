@@ -1,0 +1,53 @@
+// function definition for pipeline if input is FASTQ
+function ProcessFASTQ(optional BinaryFolder infolder, optional BinaryFile infile) -> (BinaryFolder blabla)
+{
+        // Call component segemehl for GENOME mapping (use defaults for segemehl, index, genome, etc. as stored in component.xml);
+	// input: FASTQ infile or FASTQ infolder (output from previous anduril component)
+	segem_gen = segemehl( infolder = infolder, infile = infile, prime3 = "GATCGGAAGAGCTCGTATGCCGTCTTCTGCTTG", threads = 8, differences = 1, accuracy = 90, @host="long_hm")
+        OUTPUT(segem_gen.outfolder)
+	OUTPUT(segem_gen.unmatched_folder)
+
+	// Call component segemehl for TRANSCRIPTOME mapping (set index and genome as different from the GENOME mapping default);
+        // input: FASTQ infile or FASTQ infolder (output from previous anduril component)
+        segem_trx = segemehl( infolder = infolder, infile = infile, index = "/import/bc2/home/zavolan/kanitz/resources/annotations/transcriptomes/human/gencode.v17.patches/gencode.v17.patches.transcripts_segemehl_index.idx", genome = "/import/bc2/home/zavolan/kanitz/resources/annotations/transcriptomes/human/gencode.v17.patches/gencode.v17.patches.transcripts.fa", prime3 = "GATCGGAAGAGCTCGTATGCCGTCTTCTGCTTG", threads = 11, differences = 1, accuracy = 90, @host="long_hm")
+        OUTPUT(segem_trx.outfolder)
+        OUTPUT(segem_trx.unmatched_folder)
+
+	// Call component sort_sam for GENOME; input: segemehl outfolder
+        ssam_gen = sort_sam(infolder = segem_gen.outfolder, validation_stringency = "LENIENT", @host="long_hm")
+        OUTPUT(ssam_gen.outfolder)
+
+	// Call component sort_sam for TRANSCRIPTOME; input: segemehl outfolder
+        ssam_trx = sort_sam(infolder = segem_trx.outfolder, validation_stringency = "LENIENT", @host="long_hm")
+        OUTPUT(ssam_trx.outfolder)
+        
+	// Call component remove_multi_mappers for GENOME; input: outfolder of sort_sam
+        rm_multi_mappers = remove_multi_mappers(infolder = ssam_gen.outfolder, @host="long")
+        OUTPUT(rm_multi_mappers.unique_mappers)
+	OUTPUT(rm_multi_mappers.duplicates)       
+
+	// Call component filter_sam_reads to remove multi-genome mappers from the TRANSCRIPTOME sam file
+	// inputs: ssam_trax.outfolder AND rm_multi_mappers.duplicates
+	//filter_sam_trx = filter_sam_reads(infolder = ssam_trx.outfolder, duplicates = rm_multi_mappers.duplicates, validation_stringency = "SILENT", @host="long")
+	//OUTPUT(filter_sam_trx.outfolder)
+
+	// Call component sam_to_bam for GENOME; input: rm_multi_mappers.unique_mappers
+        bam_gen = sam_to_bam(infolder = rm_multi_mappers.unique_mappers, samtools_dir="/import/bc2/soft/bin/samtools", @host="long")
+        OUTPUT(bam_gen.outfolder)
+
+	// Call component sam_to_bam for TRANSCRIPTOME file; input: filter_sam_trx.outfolder
+        bam_trx = sam_to_bam(infolder = ssam_trx.outfolder, samtools_dir="/import/bc2/soft/bin/samtools", @host="long")
+        OUTPUT(bam_trx.outfolder)
+
+	// Call component summarize_overlaps for GENOME file
+	count_table = summarize_overlaps(infolder = bam_gen.outfolder, @host="long")
+	OUTPUT(count_table.outfolder)
+
+	// Call component isoform_expression for TRANSCRIPTOME file
+	isoform = isoform_expression(infolder = bam_trx.outfolder, gene_trx_tab = "/import/bc2/home/zavolan/kanitz/resources/annotations/transcriptomes/human/gencode.v17.patches/gencode.v17.patches.gene_trx_lookup_table_test.tab", @host="long")
+	OUTPUT(isoform.outfolder)
+
+
+        return record(blabla = count_table.outfolder)
+}
+
